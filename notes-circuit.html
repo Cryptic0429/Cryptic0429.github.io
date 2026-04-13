@@ -25,9 +25,11 @@
                 <div class="font-semibold text-gray-800 hidden sm:block">
                     文档阅读器
                 </div>
-                <div class="flex gap-4">
-                    <!-- 预留的下载按钮 -->
-                    <a href="#" class="text-gray-500 hover:text-blue-600 transition" title="下载 PDF">
+                <div class="flex gap-4 items-center">
+                    <button id="openPdfBtn" type="button" class="text-gray-500 hover:text-blue-600 transition" title="阅读 PDF">
+                        <i class="fa-solid fa-book-open"></i>
+                    </button>
+                    <a href="circuit-notes.pdf" download class="text-gray-500 hover:text-blue-600 transition" title="下载 PDF">
                         <i class="fa-solid fa-download"></i>
                     </a>
                 </div>
@@ -55,16 +57,14 @@
                 <i class="fa-solid fa-file-pdf text-red-500"></i> 原版 PDF 预览
             </h2>
             
-            <!-- 占位框：将来你可以把下面这段注释掉，换成真实的 PDF 嵌入代码 -->
-            <div class="w-full h-[600px] bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex flex-col items-center justify-center text-gray-500">
-                <i class="fa-regular fa-file-pdf text-6xl mb-4 text-gray-400"></i>
-                <p class="text-lg font-medium">真实的 PDF 文件将展示在这里</p>
-                <p class="text-sm mt-2">提示：在本地根目录下放入 `circuit-notes.pdf`，然后取消下面代码的注释即可。</p>
+            <div class="w-full rounded-xl shadow-lg border border-gray-200 overflow-hidden bg-white">
+                <div id="pdfPlaceholder" class="w-full h-[600px] bg-gray-200 border-2 border-dashed border-gray-400 flex flex-col items-center justify-center text-gray-500">
+                    <i class="fa-regular fa-file-pdf text-6xl mb-4 text-gray-400"></i>
+                    <p class="text-lg font-medium">点击右上角“阅读 PDF”在本页预览</p>
+                    <p class="text-sm mt-2">将 `circuit-notes.pdf` 放到本文件同级目录即可。</p>
+                </div>
+                <embed id="pdfEmbed" src="" type="application/pdf" class="w-full h-[800px] hidden" />
             </div>
-
-            <!-- 将来嵌入真实 PDF 时的参考代码： 
-            <embed src="你的pdf文件名.pdf" type="application/pdf" width="100%" height="800px" class="rounded-xl shadow-lg border border-gray-200" />
-            -->
         </div>
 
         <!-- 网页版文字笔记内容 (充数内容) -->
@@ -100,6 +100,26 @@
     <footer class="bg-gray-900 text-white py-8 text-center">
         <p class="text-gray-400 text-sm">&copy; 2026 Cryptic. 笔记内容仅供学习交流参考。</p>
     </footer>
+
+    <script>
+        (function () {
+            const openBtn = document.getElementById('openPdfBtn');
+            const pdfEmbed = document.getElementById('pdfEmbed');
+            const placeholder = document.getElementById('pdfPlaceholder');
+
+            if (!openBtn || !pdfEmbed || !placeholder) return;
+
+            openBtn.addEventListener('click', function () {
+                if (!pdfEmbed.getAttribute('src')) {
+                    pdfEmbed.setAttribute('src', 'circuit-notes.pdf');
+                }
+
+                placeholder.classList.add('hidden');
+                pdfEmbed.classList.remove('hidden');
+                pdfEmbed.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        })();
+    </script>
 
 </body>
 </html>
