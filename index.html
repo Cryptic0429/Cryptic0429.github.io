@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页 | 欢迎来到我的世界</title>
+    <!-- 引入 Tailwind CSS 用于快速构建现代且美观的界面 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 FontAwesome 用于社交媒体等图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 开启平滑滚动，让页面导航更丝滑 */
+        html { scroll-behavior: smooth; }
+        /* 简单的渐变文字效果 */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans">
+
+    <!-- 顶部导航栏 -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-xl tracking-wider">
+                    MyPortfolio <span class="text-blue-600">.</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">首页</a>
+                        <a href="#about" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">关于我</a>
+                        <a href="#projects" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">项目经历</a>
+                        <a href="#notes" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">课程笔记</a>
+                        <a href="#reading" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">阅读分享</a>
+                        <a href="#contact" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">联系方式</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页主视觉区域 (Hero Section) -->
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 flex items-center min-h-screen">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                你好，我是 <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-gradient">Cryptic</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto mb-10">
+                SJTU 电子系大二在读 | 热爱用代码探索世界，习惯用 Markdown 与 LaTeX 记录知识体系。
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition shadow-lg hover:shadow-xl">
+                    查看我的作品
+                </a>
+                <a href="#contact" class="bg-white text-gray-800 border border-gray-200 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition shadow-sm">
+                    联系我
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我区域 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">关于我</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- 头像/插图占位 -->
+                <div class="bg-blue-50 rounded-2xl p-8 flex justify-center items-center h-80">
+                    <!-- 你可以替换 src 为你自己的照片链接 -->
+                    <div class="w-48 h-48 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 shadow-inner">
+                        <i class="fa-solid fa-user-graduate text-6xl"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">SJTUer / 终身学习者</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        你好！我是 Cryptic，目前在上海交通大学（SJTU）电子系就读大二。
+                        平时喜欢折腾各种技术，主要使用 Python 和 C++ 进行算法开发、小工具编写和底层探索。
+                        我是个“重度记录癖”，习惯用 LaTeX 排版精美的数理逻辑，用 Markdown 梳理系统性的知识网络。在这里，你会看到我的项目实践、专业课笔记以及平时阅读的感悟。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">Python</span>
+                        <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">C++</span>
+                        <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">LaTeX</span>
+                        <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">Markdown</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目作品区域 -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">项目经历</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- 项目卡片 1 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fa-solid fa-code text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">C++ 面向对象实战</h3>
+                        <p class="text-gray-600 text-sm mb-4">基于 C++ 开发的应用程序，深入运用了面向对象编程（OOP）思想、指针操作与底层内存管理机制。</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">查看源码 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 项目卡片 2 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fa-brands fa-python text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">实验数据自动化脚本</h3>
+                        <p class="text-gray-600 text-sm mb-4">使用 Python 编写的实用工具，用于高效处理复杂的电路/物理实验数据，并一键生成美观的可视化图表。</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">了解更多 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 项目卡片 3 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fa-solid fa-microchip text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">单片机/嵌入式实验</h3>
+                        <p class="text-gray-600 text-sm mb-4">结合底层硬件的编程尝试，控制各类传感器与外设，体会软硬件底层交互与协同的乐趣。</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">了解更多 &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程笔记区域 -->
+    <section id="notes" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">课程笔记</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 笔记 1 -->
+                <div class="flex items-start gap-4 p-6 border border-gray-100 rounded-xl hover:shadow-md transition bg-gray-50">
+                    <div class="bg-blue-100 text-blue-600 p-3 rounded-lg"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1">《电路理论/模电》复习笔记</h3>
+                        <p class="text-gray-500 text-sm mb-3">使用 LaTeX 精美排版的期末复习重点，包含公式推导、定理证明和典型例题解析。</p>
+                        <!-- 更新了这里的 href 和 target -->
+                        <a href="notes-circuit.html" target="_blank" class="text-blue-600 text-sm font-medium hover:underline">阅读 PDF</a>
+                    </div>
+                </div>
+                <!-- 笔记 2 -->
+                <div class="flex items-start gap-4 p-6 border border-gray-100 rounded-xl hover:shadow-md transition bg-gray-50">
+                    <div class="bg-green-100 text-green-600 p-3 rounded-lg"><i class="fa-brands fa-markdown"></i></div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1">C++ 进阶读书笔记</h3>
+                        <p class="text-gray-500 text-sm mb-3">使用 Markdown 记录的 C++ 核心知识点，涵盖 STL 容器、模板编程、智能指针等内容。</p>
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">查看文章</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 阅读分享区域 -->
+    <section id="reading" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">阅读分享</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- 书籍 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm flex flex-col sm:flex-row gap-6 items-center sm:items-start border border-gray-100">
+                    <div class="w-24 h-32 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center text-gray-400">
+                        <i class="fa-solid fa-book-open text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">《深入理解计算机系统 (CSAPP)》</h3>
+                        <p class="text-gray-600 text-sm mb-4">CS 必读神书。从程序员的视角俯瞰计算机系统，对理解 C/C++ 底层内存和运行原理非常有帮助。强烈推荐给所有技术爱好者。</p>
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-sm transition"><i class="fa-solid fa-pen-nib mr-1"></i> 阅读我的书评</a>
+                    </div>
+                </div>
+                <!-- 书籍 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm flex flex-col sm:flex-row gap-6 items-center sm:items-start border border-gray-100">
+                    <div class="w-24 h-32 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center text-gray-400">
+                        <i class="fa-solid fa-book-open text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">《黑客与画家》</h3>
+                        <p class="text-gray-600 text-sm mb-4">保罗·格雷厄姆的文集。书里提到“黑客与画家有很多共同点，他们都是创造者”，极大地拓宽了我对编程、创造力甚至是以后职业规划的认知。</p>
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-sm transition"><i class="fa-solid fa-pen-nib mr-1"></i> 阅读我的摘录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 & 页脚 -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">保持联系</h2>
+                <p class="text-gray-400 mb-8">目前我正在寻找新的实习或合作机会。如果你有合适的项目或者仅仅是想交流技术，欢迎通过邮件联系我！</p>
+                
+                <!-- 极简版：直接展示并链接到邮箱 -->
+                <a href="mailto:your.email@sjtu.edu.cn" class="inline-flex items-center justify-center gap-3 border-2 border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white transition px-8 py-3 rounded-full font-bold text-lg">
+                    <i class="fa-regular fa-envelope"></i> your.email@sjtu.edu.cn
+                </a>
+            </div>
+            
+            <div class="flex justify-center space-x-6 text-center">
+                <a href="#" class="text-gray-400 hover:text-white text-2xl transition"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white text-2xl transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white text-2xl transition"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 text-gray-500 text-sm text-center">
+                &copy; 2026 Cryptic. 保留所有权利. 构建于 GitHub Pages.
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
