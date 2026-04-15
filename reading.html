@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>阅读笔记 | Cryptic</title>
-    <meta name="description" content="Cryptic 的阅读笔记分类页，按技术阅读和方法表达整理。">
-    <meta name="theme-color" content="#f4efe7">
+    <title>Reading | Cryptic</title>
+    <meta name="description" content="Cryptic 的阅读笔记页。">
+    <meta name="theme-color" content="#f3f3f0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -18,110 +18,63 @@
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header" data-site-header>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
             <div class="flex items-center justify-between gap-4">
                 <a href="index.html" class="inline-flex items-center gap-3 no-underline">
                     <span class="brand-mark" aria-hidden="true">C</span>
-                    <span>
-                        <span class="brand-name block text-lg font-bold tracking-tight">Cryptic Reading</span>
-                        <span class="block text-sm text-slate-500">Reading Notes by Category</span>
-                    </span>
+                    <span class="brand-name text-base">Cryptic</span>
                 </a>
 
-                <nav class="hidden md:flex items-center gap-2" aria-label="页面导航">
-                    <a class="nav-link" href="#overview" data-nav-link>概览</a>
-                    <a class="nav-link" href="#technical" data-nav-link>技术阅读</a>
-                    <a class="nav-link" href="#craft" data-nav-link>方法表达</a>
+                <nav class="hidden md:flex items-center gap-1" aria-label="主导航">
+                    <a class="nav-link" href="index.html" data-nav-link>Home</a>
+                    <a class="nav-link" href="projects.html" data-nav-link>Projects</a>
+                    <a class="nav-link" href="notes.html" data-nav-link>Notes</a>
+                    <a class="nav-link" href="reading.html" data-nav-link>Reading</a>
                 </nav>
 
-                <div class="flex items-center gap-3">
-                    <a href="notes.html" class="btn-secondary hidden sm:inline-flex">笔记总览</a>
-                    <button type="button" class="icon-button md:hidden" aria-label="展开页面导航" aria-expanded="false" data-menu-toggle>
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
+                <button type="button" class="icon-button md:hidden" aria-label="展开导航菜单" aria-expanded="false" data-menu-toggle>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
 
-            <nav class="mobile-nav-panel md:hidden" aria-label="移动端页面导航" data-menu-panel hidden>
-                <a class="mobile-nav-link" href="#overview" data-nav-link>概览</a>
-                <a class="mobile-nav-link" href="#technical" data-nav-link>技术阅读</a>
-                <a class="mobile-nav-link" href="#craft" data-nav-link>方法表达</a>
-                <a class="mobile-nav-link" href="notes.html">笔记总览</a>
+            <nav class="mobile-nav-panel md:hidden" aria-label="移动端导航" data-menu-panel hidden>
+                <a class="mobile-nav-link" href="index.html" data-nav-link>Home</a>
+                <a class="mobile-nav-link" href="projects.html" data-nav-link>Projects</a>
+                <a class="mobile-nav-link" href="notes.html" data-nav-link>Notes</a>
+                <a class="mobile-nav-link" href="reading.html" data-nav-link>Reading</a>
             </nav>
         </div>
     </header>
 
-    <main id="main" class="section-shell pt-10 md:pt-14">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <section id="overview" class="mb-8">
-                <div class="hero-panel p-8 md:p-10" data-reveal>
-                    <span class="section-kicker mb-4">
-                        <i class="fa-solid fa-book-open-reader"></i>
-                        Reading
-                    </span>
-                    <h1 class="note-title hero-title text-slate-900 mb-5">阅读笔记先按主题分类，再慢慢补成长文。</h1>
-                    <p class="hero-copy text-lg mb-6 max-w-3xl">
-                        这一页先把阅读内容分成“技术阅读”和“方法 / 表达”两类。现在不急着做很多单独文章，
-                        先保证后续继续往里填时，结构是稳的。
-                    </p>
-                    <div class="flex flex-wrap gap-3 mb-6">
-                        <a href="#technical" class="btn-primary">技术阅读</a>
-                        <a href="#craft" class="btn-secondary">方法 / 表达</a>
-                        <a href="index.html" class="btn-ghost">返回主页</a>
-                    </div>
-                    <div class="pill-row">
-                        <span class="pill"><i class="fa-solid fa-microchip"></i> 技术类</span>
-                        <span class="pill"><i class="fa-solid fa-pen-nib"></i> 表达类</span>
-                        <span class="pill"><i class="fa-solid fa-file-lines"></i> 先分类，后扩写</span>
-                    </div>
+    <main id="main" class="section-shell page-shell">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section class="page-intro" data-reveal>
+                <span class="section-kicker">Reading</span>
+                <h1 class="page-title">阅读笔记</h1>
+                <p class="page-copy">按主题简单分组，不做复杂页面。</p>
+            </section>
+
+            <section class="simple-group" data-reveal>
+                <h2 class="simple-group-title">技术阅读</h2>
+                <div class="simple-list">
+                    <article class="simple-item">
+                        <div class="simple-item-main">
+                            <h3 class="simple-item-title">《深入理解计算机系统》</h3>
+                            <p class="simple-item-copy">适合整理成“程序如何运行”的主线笔记。</p>
+                        </div>
+                    </article>
                 </div>
             </section>
 
-            <section id="technical" class="mb-8" data-reveal>
-                <div class="surface-panel p-6 md:p-8">
-                    <span class="section-kicker mb-4">
-                        <i class="fa-solid fa-microchip"></i>
-                        Technical
-                    </span>
-                    <h2 class="section-title text-slate-900 mb-4">技术阅读</h2>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <article class="note-action-card">
-                            <h3 class="card-title mb-3">《深入理解计算机系统》</h3>
-                            <p class="muted-copy text-sm mb-0">
-                                适合继续写成“程序如何运行”的阅读主线，重点放在内存、编译、链接、进程这些被拆散的话题如何重新连起来。
-                            </p>
-                        </article>
-                        <article class="note-action-card">
-                            <h3 class="card-title mb-3">后续扩展方式</h3>
-                            <p class="muted-copy text-sm mb-0">
-                                如果你后面补操作系统、体系结构或网络类书目，都可以直接挂到这一栏下面，不需要再改整个页面结构。
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section id="craft" data-reveal>
-                <div class="surface-panel p-6 md:p-8">
-                    <span class="section-kicker mb-4">
-                        <i class="fa-solid fa-pen-nib"></i>
-                        Craft
-                    </span>
-                    <h2 class="section-title text-slate-900 mb-4">方法 / 表达</h2>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <article class="note-action-card">
-                            <h3 class="card-title mb-3">《黑客与画家》</h3>
-                            <p class="muted-copy text-sm mb-0">
-                                更适合写成观点摘录和判断笔记，记录哪些部分仍然有效，哪些已经需要放到今天的语境里重新解释。
-                            </p>
-                        </article>
-                        <article class="note-action-card">
-                            <h3 class="card-title mb-3">后续扩展方式</h3>
-                            <p class="muted-copy text-sm mb-0">
-                                如果你继续补方法论、表达、写作或创造力相关读物，也可以统一收在这一类里，避免阅读区越补越散。
-                            </p>
-                        </article>
-                    </div>
+            <section class="simple-group" data-reveal>
+                <h2 class="simple-group-title">方法 / 表达</h2>
+                <div class="simple-list">
+                    <article class="simple-item">
+                        <div class="simple-item-main">
+                            <h3 class="simple-item-title">《黑客与画家》</h3>
+                            <p class="simple-item-copy">适合记录观点摘录、时代差异和个人判断。</p>
+                        </div>
+                    </article>
                 </div>
             </section>
         </div>
