@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptic | 电子系学生主页</title>
-    <meta name="description" content="Cryptic 的个人主页入口页。">
+    <title>Cryptic | Personal Site</title>
+    <meta name="description" content="Cryptic 的个人主页。">
     <meta name="theme-color" content="#f4efe7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,77 +18,57 @@
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header" data-site-header>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
             <div class="flex items-center justify-between gap-4">
                 <a href="index.html" class="inline-flex items-center gap-3 no-underline">
                     <span class="brand-mark" aria-hidden="true">C</span>
-                    <span>
-                        <span class="brand-name block text-lg font-bold tracking-tight">Cryptic</span>
-                        <span class="block text-sm text-slate-500">EE Student · Personal Site</span>
-                    </span>
+                    <span class="brand-name text-base">Cryptic</span>
                 </a>
 
-                <nav class="hidden md:flex items-center gap-2" aria-label="主导航">
-                    <a class="nav-link" href="index.html" data-nav-link>首页</a>
-                    <a class="nav-link" href="projects.html" data-nav-link>项目</a>
-                    <a class="nav-link" href="notes.html" data-nav-link>学习笔记</a>
-                    <a class="nav-link" href="reading.html" data-nav-link>阅读笔记</a>
-                    <a class="nav-link" href="mailto:your.email@sjtu.edu.cn?subject=来自主页的联系">联系</a>
+                <nav class="hidden md:flex items-center gap-1" aria-label="主导航">
+                    <a class="nav-link" href="index.html" data-nav-link>Home</a>
+                    <a class="nav-link" href="projects.html" data-nav-link>Projects</a>
+                    <a class="nav-link" href="notes.html" data-nav-link>Notes</a>
+                    <a class="nav-link" href="reading.html" data-nav-link>Reading</a>
                 </nav>
 
-                <div class="flex items-center gap-3">
-                    <a href="notes.html" class="hidden sm:inline-flex btn-secondary">笔记总览</a>
-                    <button type="button" class="icon-button md:hidden" aria-label="展开导航菜单" aria-expanded="false" data-menu-toggle>
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
+                <button type="button" class="icon-button md:hidden" aria-label="展开导航菜单" aria-expanded="false" data-menu-toggle>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
 
             <nav class="mobile-nav-panel md:hidden" aria-label="移动端导航" data-menu-panel hidden>
-                <a class="mobile-nav-link" href="index.html" data-nav-link>首页</a>
-                <a class="mobile-nav-link" href="projects.html" data-nav-link>项目</a>
-                <a class="mobile-nav-link" href="notes.html" data-nav-link>学习笔记</a>
-                <a class="mobile-nav-link" href="reading.html" data-nav-link>阅读笔记</a>
-                <a class="mobile-nav-link" href="mailto:your.email@sjtu.edu.cn?subject=来自主页的联系">联系</a>
+                <a class="mobile-nav-link" href="index.html" data-nav-link>Home</a>
+                <a class="mobile-nav-link" href="projects.html" data-nav-link>Projects</a>
+                <a class="mobile-nav-link" href="notes.html" data-nav-link>Notes</a>
+                <a class="mobile-nav-link" href="reading.html" data-nav-link>Reading</a>
             </nav>
         </div>
     </header>
 
     <main id="main" class="page-shell home-shell">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <section class="max-w-3xl mx-auto">
-                <div class="hero-panel minimal-hero p-8 md:p-12 text-center" data-reveal>
-                    <span class="section-kicker mb-5">
-                        <i class="fa-regular fa-user"></i>
-                        Personal Site
-                    </span>
-                    <div class="minimal-avatar mb-8" aria-hidden="true">
-                        <span>C</span>
-                    </div>
-                    <h1 class="hero-title text-slate-900 mb-6">
-                        你好，我是 <span class="hero-highlight">Cryptic</span>
-                    </h1>
-                    <p class="hero-copy text-xl md:text-2xl max-w-2xl mx-auto mb-4">
-                        来自上海交通大学电子系。
-                    </p>
-                    <p class="hero-copy max-w-2xl mx-auto mb-8">
-                        这里主要整理课业、项目和阅读笔记。
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-3 mb-8">
-                        <a href="projects.html" class="btn-secondary">项目</a>
-                        <a href="notes.html" class="btn-primary">学习笔记</a>
-                        <a href="reading.html" class="btn-ghost">阅读笔记</a>
-                    </div>
-                    <div class="pill-row justify-center">
-                        <span class="pill"><i class="fa-solid fa-location-dot"></i> 上海</span>
-                        <span class="pill"><i class="fa-solid fa-graduation-cap"></i> 上海交通大学电子系</span>
-                    </div>
+            <section class="home-profile" data-reveal>
+                <div class="minimal-avatar mb-8" aria-hidden="true">
+                    <span>C</span>
+                </div>
+                <h1 class="home-name">Cryptic</h1>
+                <p class="home-tagline">A sophomore at SJTU EIE.</p>
+
+                <div class="home-contact-panel" aria-label="联系方式">
+                    <a href="mailto:zenghc303@sjtu.edu.cn" class="home-contact-chip">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>zenghc303@sjtu.edu.cn</span>
+                    </a>
+                    <p class="home-contact-copy">欢迎通过邮箱联系我，适合学术交流、项目协作与日常沟通。</p>
+                </div>
+
+                <div class="home-icon-row" aria-label="个人链接">
+                    <a class="home-icon home-icon-link" href="https://github.com/Cryptic0429" target="_blank" rel="noreferrer" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </div>
             </section>
-
-            <div class="home-footer-note text-center mt-8 text-sm text-slate-500" data-reveal>
-                <p>项目、笔记和阅读内容通过右上角导航进入，不在首页滚动展开。</p>
-            </div>
         </div>
     </main>
 </body>
