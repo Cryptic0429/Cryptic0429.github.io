@@ -37,6 +37,10 @@ body.site-shell {
     font-family: var(--font-body);
 }
 
+body.home-page {
+    overflow: hidden;
+}
+
 body.menu-open {
     overflow: hidden;
 }
@@ -173,6 +177,14 @@ img {
     position: relative;
 }
 
+.home-shell {
+    min-height: calc(100vh - 5.75rem);
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 .hero-panel,
 .glass-panel,
 .surface-panel,
@@ -188,6 +200,38 @@ img {
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow);
+}
+
+.minimal-hero {
+    max-width: 52rem;
+    margin: 0 auto;
+}
+
+.minimal-hero .hero-title {
+    font-size: clamp(3.4rem, 8vw, 5rem);
+    line-height: 1;
+}
+
+.minimal-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(15, 118, 110, 0.18), rgba(194, 65, 12, 0.18));
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.minimal-avatar span {
+    color: var(--brand-strong);
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
 }
 
 .hero-panel::before {
@@ -531,6 +575,31 @@ img {
     box-shadow: var(--shadow-soft);
 }
 
+.latex-render-shell {
+    padding: 2rem;
+    min-height: 32rem;
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.latex-render-shell .body {
+    margin: 0 auto;
+    max-width: 52rem;
+}
+
+.latex-error-block {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #7f1d1d;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.home-footer-note {
+    opacity: 0.9;
+}
+
 .preview-placeholder {
     min-height: 24rem;
     padding: 2rem;
@@ -586,6 +655,15 @@ img {
 }
 
 @media (max-width: 767px) {
+    body.home-page {
+        overflow: auto;
+    }
+
+    .home-shell {
+        min-height: auto;
+        display: block;
+    }
+
     .section-shell {
         padding-top: 4rem;
         padding-bottom: 4rem;

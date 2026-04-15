@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{LaTeX 笔记示例}
+\author{Cryptic}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{说明}
+
+这是一份用于站内预览的 \LaTeX{} 示例文件。
+
+\section{公式示例}
+
+欧拉公式：
+\[
+e^{i\pi} + 1 = 0
+\]
+
+一个常见积分：
+\[
+\int_0^1 x^2 \, dx = \frac{1}{3}
+\]
+
+\section{你之后怎么用}
+
+把你自己的 `.tex` 文件放到 `latex/` 文件夹里，然后访问：
+
+\begin{verbatim}
+latex-viewer.html?file=latex/你的文件名.tex
+\end{verbatim}
+
+如果你的内容不是完整文档，只是正文片段，查看器也会自动补最小文档包装再尝试渲染。
+
+\end{document}

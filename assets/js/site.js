@@ -27,10 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function activatePath() {
+        var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        navLinks.forEach(function (link) {
+            var href = link.getAttribute('href') || '';
+            if (href.startsWith('#') || href.startsWith('mailto:')) return;
+            var targetPath = href.split('/').pop();
+            link.classList.toggle('is-active', targetPath === currentPath);
+        });
+    }
+
     yearNodes.forEach(function (node) {
         node.textContent = String(new Date().getFullYear());
     });
 
+    activatePath();
     updateHeader();
     window.addEventListener('scroll', updateHeader, { passive: true });
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptic | 电子系学生主页</title>
-    <meta name="description" content="Cryptic 的个人主页入口页。">
+    <title>项目 | Cryptic</title>
+    <meta name="description" content="Cryptic 的项目页。">
     <meta name="theme-color" content="#f4efe7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/site.css">
     <script defer src="assets/js/site.js"></script>
 </head>
-<body class="site-shell home-page">
+<body class="site-shell">
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header" data-site-header>
@@ -24,7 +24,7 @@
                     <span class="brand-mark" aria-hidden="true">C</span>
                     <span>
                         <span class="brand-name block text-lg font-bold tracking-tight">Cryptic</span>
-                        <span class="block text-sm text-slate-500">EE Student · Personal Site</span>
+                        <span class="block text-sm text-slate-500">Projects</span>
                     </span>
                 </a>
 
@@ -54,41 +54,55 @@
         </div>
     </header>
 
-    <main id="main" class="page-shell home-shell">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <section class="max-w-3xl mx-auto">
-                <div class="hero-panel minimal-hero p-8 md:p-12 text-center" data-reveal>
-                    <span class="section-kicker mb-5">
-                        <i class="fa-regular fa-user"></i>
-                        Personal Site
+    <main id="main" class="section-shell pt-10 md:pt-14">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section class="mb-8">
+                <div class="hero-panel p-8 md:p-10" data-reveal>
+                    <span class="section-kicker mb-4">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        Projects
                     </span>
-                    <div class="minimal-avatar mb-8" aria-hidden="true">
-                        <span>C</span>
-                    </div>
-                    <h1 class="hero-title text-slate-900 mb-6">
-                        你好，我是 <span class="hero-highlight">Cryptic</span>
-                    </h1>
-                    <p class="hero-copy text-xl md:text-2xl max-w-2xl mx-auto mb-4">
-                        来自上海交通大学电子系。
+                    <h1 class="note-title hero-title text-slate-900 mb-5">项目页单独放，不再占用首页滚动空间。</h1>
+                    <p class="hero-copy text-lg mb-0 max-w-3xl">
+                        这里先保留项目方向和状态。等后面有完整仓库、长文或实验记录时，再继续往具体页面展开。
                     </p>
-                    <p class="hero-copy max-w-2xl mx-auto mb-8">
-                        这里主要整理课业、项目和阅读笔记。
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-3 mb-8">
-                        <a href="projects.html" class="btn-secondary">项目</a>
-                        <a href="notes.html" class="btn-primary">学习笔记</a>
-                        <a href="reading.html" class="btn-ghost">阅读笔记</a>
-                    </div>
-                    <div class="pill-row justify-center">
-                        <span class="pill"><i class="fa-solid fa-location-dot"></i> 上海</span>
-                        <span class="pill"><i class="fa-solid fa-graduation-cap"></i> 上海交通大学电子系</span>
-                    </div>
                 </div>
             </section>
 
-            <div class="home-footer-note text-center mt-8 text-sm text-slate-500" data-reveal>
-                <p>项目、笔记和阅读内容通过右上角导航进入，不在首页滚动展开。</p>
-            </div>
+            <section class="grid md:grid-cols-3 gap-5" data-reveal>
+                <article class="project-card">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="card-icon"><i class="fa-solid fa-code"></i></span>
+                        <span class="status-chip draft">整理中</span>
+                    </div>
+                    <h3 class="card-title mb-3">C++ 面向对象练习</h3>
+                    <p class="muted-copy text-sm mb-0">
+                        重点会放在类设计、模块拆分和重构过程，而不是只展示最终结果。
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="card-icon"><i class="fa-brands fa-python"></i></span>
+                        <span class="status-chip live">持续可用</span>
+                    </div>
+                    <h3 class="card-title mb-3">实验数据处理脚本</h3>
+                    <p class="muted-copy text-sm mb-0">
+                        面向重复实验流程，把清洗、计算和出图串成一条更顺的路径。
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <span class="card-icon"><i class="fa-solid fa-microchip"></i></span>
+                        <span class="status-chip draft">记录优先</span>
+                    </div>
+                    <h3 class="card-title mb-3">单片机 / 嵌入式实验</h3>
+                    <p class="muted-copy text-sm mb-0">
+                        计划把波形、调试过程和实验记录整理成更适合复盘的页面。
+                    </p>
+                </article>
+            </section>
         </div>
     </main>
 </body>
