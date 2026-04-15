@@ -575,27 +575,6 @@ img {
     box-shadow: var(--shadow-soft);
 }
 
-.latex-render-shell {
-    padding: 2rem;
-    min-height: 32rem;
-    background: rgba(255, 255, 255, 0.92);
-}
-
-.latex-render-shell .body {
-    margin: 0 auto;
-    max-width: 52rem;
-}
-
-.latex-error-block {
-    margin: 0;
-    white-space: pre-wrap;
-    word-break: break-word;
-    color: #7f1d1d;
-    font-size: 0.95rem;
-    line-height: 1.8;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
 .home-footer-note {
     opacity: 0.9;
 }

@@ -32,7 +32,6 @@
                     <a class="nav-link" href="#overview" data-nav-link>概览</a>
                     <a class="nav-link" href="#study" data-nav-link>学习笔记</a>
                     <a class="nav-link" href="#reading" data-nav-link>阅读笔记</a>
-                    <a class="nav-link" href="#latex" data-nav-link>LaTeX</a>
                     <a class="nav-link" href="#usage" data-nav-link>使用方式</a>
                 </nav>
 
@@ -48,7 +47,6 @@
                 <a class="mobile-nav-link" href="#overview" data-nav-link>概览</a>
                 <a class="mobile-nav-link" href="#study" data-nav-link>学习笔记</a>
                 <a class="mobile-nav-link" href="#reading" data-nav-link>阅读笔记</a>
-                <a class="mobile-nav-link" href="#latex" data-nav-link>LaTeX</a>
                 <a class="mobile-nav-link" href="#usage" data-nav-link>使用方式</a>
                 <a class="mobile-nav-link" href="index.html">返回主页</a>
             </nav>
@@ -304,38 +302,6 @@
                 </div>
             </section>
 
-            <section id="latex" class="mb-8" data-reveal>
-                <div class="surface-panel p-6 md:p-8">
-                    <span class="section-kicker mb-4">
-                        <i class="fa-solid fa-file-lines"></i>
-                        LaTeX
-                    </span>
-                    <h2 class="section-title text-slate-900 mb-4">LaTeX 直读</h2>
-                    <p class="section-copy max-w-3xl mb-6">
-                        如果你平时主要用 LaTeX 写笔记，现在可以直接把 `.tex` 文件放到项目根目录下的 `latex/` 文件夹里，
-                        再用查看器直接渲染，不需要先手动转成 PDF 才能看。
-                    </p>
-                    <div class="grid md:grid-cols-3 gap-4 mb-6">
-                        <div class="note-action-card">
-                            <strong>放文件</strong>
-                            <p class="muted-copy text-sm mb-0">把笔记放到 `latex/` 目录，例如 `latex/my-note.tex`。</p>
-                        </div>
-                        <div class="note-action-card">
-                            <strong>直接打开</strong>
-                            <p class="muted-copy text-sm mb-0">访问 `latex-viewer.html?file=latex/my-note.tex` 即可。</p>
-                        </div>
-                        <div class="note-action-card">
-                            <strong>支持片段</strong>
-                            <p class="muted-copy text-sm mb-0">如果你写的不是完整文档，查看器会自动补最小 LaTeX 外壳后再渲染。</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="latex-viewer.html?file=latex/sample-note.tex" class="btn-primary">打开 LaTeX 示例</a>
-                        <a href="latex-viewer.html" class="btn-secondary">进入查看器</a>
-                    </div>
-                </div>
-            </section>
-
             <section id="usage" data-reveal>
                 <div class="surface-panel p-6 md:p-8">
                     <span class="section-kicker mb-4">
@@ -349,8 +315,8 @@
                             <p class="muted-copy text-sm mb-0">单页里先放概览、重点、题型或摘录，保证能直接在线读。</p>
                         </div>
                         <div class="note-action-card">
-                            <strong>再放 PDF 或 LaTeX</strong>
-                            <p class="muted-copy text-sm mb-0">PDF 可以直接接入下载和预览；LaTeX 则可以放进 `latex/` 目录后交给查看器渲染。</p>
+                            <strong>再放 PDF 原件</strong>
+                            <p class="muted-copy text-sm mb-0">把对应 PDF 放到站点根目录，按钮会自动沿着既有路径工作。</p>
                         </div>
                         <div class="note-action-card">
                             <strong>继续按分类扩展</strong>
