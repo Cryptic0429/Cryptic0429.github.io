@@ -29,11 +29,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function activatePath() {
         var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        var activeNavPath = currentPath;
+
+        if (currentPath.startsWith('notes-')) {
+            activeNavPath = 'notes.html';
+        } else if (currentPath.startsWith('reading-')) {
+            activeNavPath = 'reading.html';
+        }
+
         navLinks.forEach(function (link) {
             var href = link.getAttribute('href') || '';
             if (href.startsWith('#') || href.startsWith('mailto:')) return;
             var targetPath = href.split('/').pop();
-            link.classList.toggle('is-active', targetPath === currentPath);
+            link.classList.toggle('is-active', targetPath === activeNavPath);
         });
     }
 
