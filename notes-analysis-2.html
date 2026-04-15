@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>《电路理论（荣誉）》复习笔记 | Cryptic</title>
-    <meta name="description" content="电路理论（荣誉）复习笔记，提供网页版速查、核心知识点和 PDF 原件预览入口。">
+    <title>《数学分析（荣誉）（2）》笔记 | Cryptic</title>
+    <meta name="description" content="数学分析（荣誉）（2）课程笔记页，支持在线阅读、PDF 预览和下载。">
     <meta name="theme-color" content="#f4efe7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,18 +12,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['\\(', '\\)']],
-                displayMath: [['$$', '$$']]
-            },
-            options: {
-                processHtmlClass: 'math-content'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script defer src="assets/js/site.js"></script>
     <script defer src="assets/js/notes.js"></script>
 </head>
@@ -37,14 +25,14 @@
                     <span class="brand-mark" aria-hidden="true">C</span>
                     <span>
                         <span class="brand-name block text-lg font-bold tracking-tight">Cryptic Notes</span>
-                        <span class="block text-sm text-slate-500">Circuit Theory Honors</span>
+                        <span class="block text-sm text-slate-500">Mathematical Analysis Honors II</span>
                     </span>
                 </a>
 
                 <nav class="hidden md:flex items-center gap-2" aria-label="页面导航">
                     <a class="nav-link" href="#overview" data-nav-link>概览</a>
                     <a class="nav-link" href="#preview" data-nav-link>PDF 预览</a>
-                    <a class="nav-link" href="#highlights" data-nav-link>速查内容</a>
+                    <a class="nav-link" href="#highlights" data-nav-link>阅读页说明</a>
                 </nav>
 
                 <div class="flex items-center gap-3">
@@ -58,7 +46,7 @@
             <nav class="mobile-nav-panel md:hidden" aria-label="移动端页面导航" data-menu-panel hidden>
                 <a class="mobile-nav-link" href="#overview" data-nav-link>概览</a>
                 <a class="mobile-nav-link" href="#preview" data-nav-link>PDF 预览</a>
-                <a class="mobile-nav-link" href="#highlights" data-nav-link>速查内容</a>
+                <a class="mobile-nav-link" href="#highlights" data-nav-link>阅读页说明</a>
                 <a class="mobile-nav-link" href="notes.html">返回总览</a>
             </nav>
         </div>
@@ -71,53 +59,53 @@
                     <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
                         <div>
                             <span class="section-kicker mb-4">
-                                <i class="fa-solid fa-bolt"></i>
+                                <i class="fa-solid fa-square-root-variable"></i>
                                 Course Notes
                             </span>
-                            <h1 class="note-title hero-title text-slate-900 mb-5">《电路理论（荣誉）》复习速查</h1>
+                            <h1 class="note-title hero-title text-slate-900 mb-5">《数学分析（荣誉）（2）》</h1>
                             <p class="hero-copy text-lg mb-6">
-                                这一页目前承担两件事：先提供可直接阅读的网页版速查，再把 PDF 原件挂进站点里，
-                                让课程笔记不只是一个单独附件。
+                                这页同样先以“能直接读”为目标：网页版负责放复习时最常回看的结构和重点，
+                                PDF 继续保留完整推导、证明和原始整理。
                             </p>
                             <div class="flex flex-wrap gap-3 mb-6">
-                                <button type="button" class="btn-primary" data-open-pdf data-pdf-url="circuit-theory-honors.pdf">在本页预览 PDF</button>
-                                <a href="circuit-theory-honors.pdf" class="btn-secondary" download data-download-pdf>下载 PDF</a>
+                                <button type="button" class="btn-primary" data-open-pdf data-pdf-url="mathematical-analysis-honors-2.pdf">在本页预览 PDF</button>
+                                <a href="mathematical-analysis-honors-2.pdf" class="btn-secondary" download data-download-pdf>下载 PDF</a>
                                 <a href="notes.html" class="btn-ghost">返回总览</a>
                             </div>
                             <div class="pill-row">
                                 <span class="pill"><i class="fa-solid fa-calendar-days"></i> 最后更新：2026 年 4 月 15 日</span>
-                                <span class="pill"><i class="fa-regular fa-clock"></i> 网页版阅读：约 6 分钟</span>
-                                <span class="pill"><i class="fa-solid fa-file-pdf"></i> PDF 文件名：`circuit-theory-honors.pdf`</span>
+                                <span class="pill"><i class="fa-regular fa-clock"></i> 页面阅读：约 3 分钟</span>
+                                <span class="pill"><i class="fa-solid fa-file-pdf"></i> PDF 文件名：`mathematical-analysis-honors-2.pdf`</span>
                             </div>
                         </div>
 
                         <div class="grid gap-4">
                             <div class="note-panel p-6">
-                                <span class="meta-label mb-3">内容范围</span>
+                                <span class="meta-label mb-3">页面定位</span>
                                 <div class="grid sm:grid-cols-2 gap-3">
                                     <div class="metric-card">
-                                        <span class="metric-number">KCL</span>
-                                        <span class="muted-copy text-sm">节点电流定律与方程搭建</span>
+                                        <span class="metric-number">Defs</span>
+                                        <span class="muted-copy text-sm">定义和结论可做速查</span>
                                     </div>
                                     <div class="metric-card">
-                                        <span class="metric-number">KVL</span>
-                                        <span class="muted-copy text-sm">回路电压定律与闭环关系</span>
+                                        <span class="metric-number">Proof</span>
+                                        <span class="muted-copy text-sm">完整证明保留在 PDF</span>
                                     </div>
                                     <div class="metric-card">
-                                        <span class="metric-number">Op-Amp</span>
-                                        <span class="muted-copy text-sm">理想运放的虚短与虚断</span>
+                                        <span class="metric-number">Map</span>
+                                        <span class="muted-copy text-sm">先把知识结构搭出来</span>
                                     </div>
                                     <div class="metric-card">
-                                        <span class="metric-number">PDF</span>
-                                        <span class="muted-copy text-sm">原版推导与习题讲解入口</span>
+                                        <span class="metric-number">Revise</span>
+                                        <span class="muted-copy text-sm">考前回看会更快</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="note-panel p-6">
-                                <span class="meta-label mb-3">使用建议</span>
+                                <span class="meta-label mb-3">当前状态</span>
                                 <p class="muted-copy text-sm mb-0">
-                                    如果只是临时查公式，直接看下方速查更快；需要完整推导、题型拆解或原始排版时，再回到 PDF 原件。
+                                    这页适合先补定义、定理框架、常见思路和题型入口，尽量把高频回看内容从 PDF 里提出来。
                                 </p>
                             </div>
                         </div>
@@ -132,14 +120,14 @@
                         <nav aria-label="笔记内部导航" class="grid gap-2">
                             <a class="note-nav-link" href="#overview" data-nav-link>页面概览</a>
                             <a class="note-nav-link" href="#preview" data-nav-link>PDF 预览</a>
-                            <a class="note-nav-link" href="#highlights" data-nav-link>核心知识点</a>
+                            <a class="note-nav-link" href="#highlights" data-nav-link>阅读页说明</a>
                         </nav>
                     </div>
 
                     <div class="note-sidebar-card">
-                        <span class="meta-label mb-3">当前状态</span>
-                        <p class="muted-copy text-sm mb-3">这一页已经有可直接阅读的网页版内容，适合先复习思路，再回到 PDF 看完整推导。</p>
-                        <p class="muted-copy text-sm mb-0">如果目录里补上 `circuit-theory-honors.pdf`，预览和下载按钮会直接沿用当前路径工作。</p>
+                        <span class="meta-label mb-3">建议补法</span>
+                        <p class="muted-copy text-sm mb-3">这一类课程很适合把“定义 - 结论 - 典型思路”压缩成网页速查。</p>
+                        <p class="muted-copy text-sm mb-0">证明细节如果已经写在 PDF 里，可以先不急着全部迁移到网页。</p>
                     </div>
                 </aside>
 
@@ -155,8 +143,8 @@
                                     <h2 class="section-title text-slate-900">PDF 原件预览</h2>
                                 </div>
                                 <div class="flex flex-wrap gap-3">
-                                    <button type="button" class="btn-primary" data-open-pdf data-pdf-url="circuit-theory-honors.pdf">加载预览</button>
-                                    <a href="circuit-theory-honors.pdf" class="btn-secondary" download data-download-pdf>下载原件</a>
+                                    <button type="button" class="btn-primary" data-open-pdf data-pdf-url="mathematical-analysis-honors-2.pdf">加载预览</button>
+                                    <a href="mathematical-analysis-honors-2.pdf" class="btn-secondary" download data-download-pdf>下载原件</a>
                                 </div>
                             </div>
 
@@ -164,7 +152,7 @@
                                 <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
                                     <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
                                     <p class="text-lg font-semibold text-slate-700 mb-0">点击按钮后在本页尝试加载 PDF</p>
-                                    <p class="muted-copy text-sm mb-0">如果当前目录中还没有对应文件，页面会在这里提示，而不是留下一块空白区域。</p>
+                                    <p class="muted-copy text-sm mb-0">如果还没放入对应文件，状态区域会给出提示。</p>
                                     <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
                                 </div>
                                 <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
@@ -173,45 +161,32 @@
                     </section>
 
                     <section id="highlights" data-reveal>
-                        <div class="surface-panel p-6 md:p-8 article-body math-content">
+                        <div class="surface-panel p-6 md:p-8 article-body">
                             <span class="section-kicker mb-4">
                                 <i class="fa-solid fa-lightbulb"></i>
                                 Highlights
                             </span>
-                            <h2 class="section-title text-slate-900 mb-6">网页版核心知识点速查</h2>
+                            <h2 class="section-title text-slate-900 mb-6">这一页适合先放什么</h2>
 
                             <div class="grid gap-6">
                                 <article class="note-action-card">
-                                    <h3 class="card-title mb-3">1. 基尔霍夫定律（Kirchhoff's Laws）</h3>
-                                    <p class="mb-4">
-                                        复杂电路分析的起点不是“看图猜结论”，而是先把 KCL、KVL 写成方程，
-                                        再把电流、电压关系收成系统的求解过程。
-                                    </p>
-                                    <div class="formula-block rounded-2xl p-5 text-sm">
-                                        <p class="mb-3"><strong>KCL：</strong> 对任意节点，流入与流出电流的代数和为零。</p>
-                                        <p class="text-center text-lg my-4">$$ \sum_{k=1}^{n} I_k = 0 $$</p>
-                                        <p class="mb-3 mt-4"><strong>KVL：</strong> 沿任意闭合回路，所有电压升降的代数和为零。</p>
-                                        <p class="text-center text-lg my-4">$$ \sum_{k=1}^{m} U_k = 0 $$</p>
-                                    </div>
-                                </article>
-
-                                <article class="note-action-card">
-                                    <h3 class="card-title mb-3">2. 理想运算放大器（Op-Amp）</h3>
-                                    <p class="mb-4">
-                                        理想运放最常用的不是器件细节，而是分析中的两个近似条件：
-                                        电压上的“虚短”和电流上的“虚断”。
-                                    </p>
-                                    <ul class="list-disc list-inside grid gap-2 mb-0">
-                                        <li><strong>虚短：</strong> 反相端与同相端电压近似相等，\( V_+ \approx V_- \)</li>
-                                        <li><strong>虚断：</strong> 输入阻抗极高，可视为输入电流近似为零，\( I_+ = I_- = 0 \)</li>
-                                    </ul>
-                                </article>
-
-                                <article class="note-action-card">
-                                    <h3 class="card-title mb-3">3. 网页版与 PDF 的分工</h3>
+                                    <h3 class="card-title mb-3">1. 定义和结论先上线</h3>
                                     <p class="mb-0">
-                                        这页适合查公式、回忆分析思路和快速定位知识点；如果你需要完整推导、题型拆解或更细的课堂笔记，
-                                        还是应该回到 PDF 原件。两者各司其职，会比只保留附件更好用。
+                                        数分这类课程里，最适合先搬到网页上的通常是定义、定理表述、条件差异和易混点，因为这些内容最适合做快速回看。
+                                    </p>
+                                </article>
+
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">2. 证明思路写骨架就够</h3>
+                                    <p class="mb-0">
+                                        如果完整证明已经在原始笔记里存在，网页版先写关键思路、常见套路和切入点就足够，不需要一开始就全量迁移。
+                                    </p>
+                                </article>
+
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">3. 题型入口能显著提高复习效率</h3>
+                                    <p class="mb-0">
+                                        如果后续要继续补内容，建议把典型题型、常见变式和易错点单独列出来。对考前使用来说，这通常比纯文本长笔记更有价值。
                                     </p>
                                 </article>
                             </div>

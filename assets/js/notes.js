@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    var pdfUrl = previewTriggers[0].getAttribute('data-pdf-url') || 'circuit-notes.pdf';
+    var pdfUrl = previewTriggers[0].getAttribute('data-pdf-url') || 'note.pdf';
+    var pdfName = (pdfUrl.split('/').pop() || pdfUrl).trim();
     var busy = false;
 
     function setStatus(message, tone) {
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var exists = await pdfExists();
         if (!exists) {
-            setStatus('未找到 circuit-notes.pdf，请先把文件放到当前目录后再试。', 'error');
+            setStatus('未找到 ' + pdfName + '，请先把文件放到当前目录后再试。', 'error');
             previewTriggers.forEach(function (trigger) {
                 trigger.disabled = false;
             });
