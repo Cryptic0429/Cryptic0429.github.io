@@ -1,31 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var noteId = document.body.getAttribute('data-note-id') || '';
-    var accessConfig = (window.noteAccessConfig && window.noteAccessConfig[noteId]) || {};
     var previewTriggers = Array.from(document.querySelectorAll('[data-open-pdf]'));
     var previewEmbed = document.querySelector('[data-pdf-embed]');
     var placeholder = document.querySelector('[data-pdf-placeholder]');
     var statusNode = document.querySelector('[data-pdf-status]');
     var downloadLinks = Array.from(document.querySelectorAll('[data-download-pdf]'));
-    var downloadActions = Array.from(document.querySelectorAll('[data-download-action]'));
-    var downloadNote = document.querySelector('[data-download-note]');
-
-    var downloadEnabled = accessConfig.downloadEnabled === true;
-
-    function updateDownloadState() {
-        downloadActions.forEach(function (node) {
-            node.hidden = !downloadEnabled;
-        });
-
-        if (!downloadNote) return;
-
-        if (downloadEnabled) {
-            downloadNote.textContent = '当前设置：允许下载 PDF。若要改为仅在线预览，可在 assets/js/note-access.js 中关闭该页的 downloadEnabled。';
-        } else {
-            downloadNote.textContent = '当前设置：仅支持在线预览，不开放 PDF 下载。若后续允许下载，只需在 assets/js/note-access.js 中打开该页的 downloadEnabled。';
-        }
-    }
-
-    updateDownloadState();
 
     if (previewTriggers.length === 0 || !previewEmbed || !placeholder || !statusNode || downloadLinks.length === 0) {
         return;
@@ -92,9 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     downloadLinks.forEach(function (link) {
         link.setAttribute('href', pdfUrl);
-        if (!downloadEnabled) {
-            link.removeAttribute('download');
-        }
     });
 
     previewTriggers.forEach(function (trigger) {
