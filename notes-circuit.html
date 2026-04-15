@@ -3,123 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>《电路理论/模电》复习笔记 | Cryptic</title>
-    <!-- 引入 Tailwind CSS -->
+    <title>《电路理论 / 模电》复习笔记 | Cryptic</title>
+    <meta name="description" content="电路理论与模拟电子技术期末复习笔记，提供网页版速查、公式内容和 PDF 原件预览入口。">
+    <meta name="theme-color" content="#f4efe7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 引入 MathJax 用于渲染网页上的 LaTeX 公式 (备用) -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body class="bg-gray-50 text-gray-800 antialiased font-sans">
-
-    <!-- 顶部导航 -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <!-- 返回按钮 -->
-                <a href="index.html" class="text-gray-500 hover:text-blue-600 transition flex items-center gap-2 font-medium">
-                    <i class="fa-solid fa-arrow-left"></i> 返回主页
-                </a>
-                <div class="font-semibold text-gray-800 hidden sm:block">
-                    文档阅读器
-                </div>
-                <div class="flex gap-4 items-center">
-                    <button id="openPdfBtn" type="button" class="text-gray-500 hover:text-blue-600 transition" title="阅读 PDF">
-                        <i class="fa-solid fa-book-open"></i>
-                    </button>
-                    <a href="circuit-notes.pdf" download class="text-gray-500 hover:text-blue-600 transition" title="下载 PDF">
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 笔记主要内容区 -->
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- 头部信息 -->
-        <header class="mb-10 text-center sm:text-left border-b border-gray-200 pb-8">
-            <div class="flex items-center justify-center sm:justify-start gap-3 mb-4">
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider">电路理论</span>
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider">模拟电子技术</span>
-            </div>
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-gray-900">
-                期末核心考点及公式推导速查
-            </h1>
-            <p class="text-gray-500 text-lg">最后更新于：2026年4月13日 • 预计阅读时间：15分钟</p>
-        </header>
-
-        <!-- PDF 嵌入区域 (目前用占位符替代) -->
-        <div class="mb-16">
-            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-file-pdf text-red-500"></i> 原版 PDF 预览
-            </h2>
-            
-            <div class="w-full rounded-xl shadow-lg border border-gray-200 overflow-hidden bg-white">
-                <div id="pdfPlaceholder" class="w-full h-[600px] bg-gray-200 border-2 border-dashed border-gray-400 flex flex-col items-center justify-center text-gray-500">
-                    <i class="fa-regular fa-file-pdf text-6xl mb-4 text-gray-400"></i>
-                    <p class="text-lg font-medium">点击右上角“阅读 PDF”在本页预览</p>
-                    <p class="text-sm mt-2">将 `circuit-notes.pdf` 放到本文件同级目录即可。</p>
-                </div>
-                <embed id="pdfEmbed" src="" type="application/pdf" class="w-full h-[800px] hidden" />
-            </div>
-        </div>
-
-        <!-- 网页版文字笔记内容 (充数内容) -->
-        <article class="prose prose-lg prose-blue max-w-none">
-            <h2 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-4">1. 基尔霍夫定律 (Kirchhoff's Laws)</h2>
-            <p class="mb-4 text-gray-700 leading-relaxed">
-                基尔霍夫定律是电路分析的基础，分为电流定律（KCL）和电压定律（KVL）。在分析复杂拓扑电路时，通常结合节点电压法或网孔电流法使用。
-            </p>
-            <div class="bg-gray-100 p-6 rounded-lg mb-8 font-mono text-sm">
-                <!-- 这里使用了 MathJax 来渲染 LaTeX 公式 -->
-                <p class="mb-2"><strong>KCL (节点电流定律):</strong> 对于任何节点，流入节点的电流之和等于流出节点的电流之和。</p>
-                <p class="text-center text-lg my-4">$$ \sum_{k=1}^{n} I_k = 0 $$</p>
-                <p class="mb-2 mt-4"><strong>KVL (回路电压定律):</strong> 沿任何闭合回路，所有元件的电压降之和等于零。</p>
-                <p class="text-center text-lg my-4">$$ \sum_{k=1}^{m} U_k = 0 $$</p>
-            </div>
-
-            <h2 class="text-2xl font-bold mb-4 border-l-4 border-blue-600 pl-4">2. 理想运算放大器 (Op-Amp)</h2>
-            <p class="mb-4 text-gray-700 leading-relaxed">
-                在模拟电子技术中，理想运放是我们分析放大电路时的重要工具。它具有两个核心特性（虚短和虚断）：
-            </p>
-            <ul class="list-disc list-inside mb-8 text-gray-700 space-y-2">
-                <li><strong>虚短 (Virtual Short):</strong> 反相输入端与同相输入端的电压近似相等： \( V_+ \approx V_- \)</li>
-                <li><strong>虚断 (Virtual Open):</strong> 输入阻抗无穷大，因此输入端电流为零： \( I_+ = I_- = 0 \)</li>
-            </ul>
-            
-            <p class="text-gray-500 italic border-t border-gray-200 pt-8 mt-8 text-center">
-                —— 更多详尽推导与完整习题解答，请参阅上方 PDF 原件。——
-            </p>
-        </article>
-    </main>
-
-    <!-- 简易页脚 -->
-    <footer class="bg-gray-900 text-white py-8 text-center">
-        <p class="text-gray-400 text-sm">&copy; 2026 Cryptic. 笔记内容仅供学习交流参考。</p>
-    </footer>
-
+    <link rel="stylesheet" href="assets/css/site.css">
     <script>
-        (function () {
-            const openBtn = document.getElementById('openPdfBtn');
-            const pdfEmbed = document.getElementById('pdfEmbed');
-            const placeholder = document.getElementById('pdfPlaceholder');
-
-            if (!openBtn || !pdfEmbed || !placeholder) return;
-
-            openBtn.addEventListener('click', function () {
-                if (!pdfEmbed.getAttribute('src')) {
-                    pdfEmbed.setAttribute('src', 'circuit-notes.pdf');
-                }
-
-                placeholder.classList.add('hidden');
-                pdfEmbed.classList.remove('hidden');
-                pdfEmbed.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        })();
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$']]
+            },
+            options: {
+                processHtmlClass: 'math-content'
+            }
+        };
     </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="assets/js/site.js"></script>
+    <script defer src="assets/js/notes.js"></script>
+</head>
+<body class="site-shell">
+    <a class="skip-link" href="#main">跳到正文</a>
 
+    <header class="site-header" data-site-header>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between gap-4">
+                <a href="index.html" class="inline-flex items-center gap-3 no-underline">
+                    <span class="brand-mark" aria-hidden="true">C</span>
+                    <span>
+                        <span class="brand-name block text-lg font-bold tracking-tight">Cryptic Notes</span>
+                        <span class="block text-sm text-slate-500">Circuit Theory / Analog Electronics</span>
+                    </span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-2" aria-label="页面导航">
+                    <a class="nav-link" href="#overview" data-nav-link>概览</a>
+                    <a class="nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                    <a class="nav-link" href="#highlights" data-nav-link>速查内容</a>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="btn-secondary hidden sm:inline-flex">返回主页</a>
+                    <button type="button" class="icon-button md:hidden" aria-label="展开页面导航" aria-expanded="false" data-menu-toggle>
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="mobile-nav-panel md:hidden" aria-label="移动端页面导航" data-menu-panel hidden>
+                <a class="mobile-nav-link" href="#overview" data-nav-link>概览</a>
+                <a class="mobile-nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                <a class="mobile-nav-link" href="#highlights" data-nav-link>速查内容</a>
+                <a class="mobile-nav-link" href="index.html">返回主页</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="section-shell pt-10 md:pt-14">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section id="overview" class="mb-8">
+                <div class="hero-panel p-8 md:p-10" data-reveal>
+                    <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
+                        <div>
+                            <span class="section-kicker mb-4">
+                                <i class="fa-solid fa-bolt"></i>
+                                Notes Overview
+                            </span>
+                            <h1 class="note-title hero-title text-slate-900 mb-5">《电路理论 / 模电》期末复习速查</h1>
+                            <p class="hero-copy text-lg mb-6">
+                                这一页承担两个角色：一是给出可快速浏览的网页版摘要，二是把 PDF 原件预览接进站点，
+                                避免课程笔记只作为孤立附件存在。
+                            </p>
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <button type="button" class="btn-primary" data-open-pdf data-pdf-url="circuit-notes.pdf">在本页预览 PDF</button>
+                                <a href="circuit-notes.pdf" class="btn-secondary" download data-download-pdf>下载 PDF</a>
+                                <a href="index.html" class="btn-ghost">返回主页</a>
+                            </div>
+                            <div class="pill-row">
+                                <span class="pill"><i class="fa-solid fa-calendar-days"></i> 最后更新：2026 年 4 月 13 日</span>
+                                <span class="pill"><i class="fa-regular fa-clock"></i> 网页版阅读：约 8 分钟</span>
+                                <span class="pill"><i class="fa-solid fa-scroll"></i> PDF 原件：若存在则可直接预览</span>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-4">
+                            <div class="note-panel p-6">
+                                <span class="meta-label mb-3">内容范围</span>
+                                <div class="grid sm:grid-cols-2 gap-3">
+                                    <div class="metric-card">
+                                        <span class="metric-number">KCL</span>
+                                        <span class="muted-copy text-sm">节点电流定律与方程搭建</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">KVL</span>
+                                        <span class="muted-copy text-sm">回路电压定律与闭环关系</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">Op-Amp</span>
+                                        <span class="muted-copy text-sm">理想运放的虚短与虚断</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">PDF</span>
+                                        <span class="muted-copy text-sm">原版推导与习题讲解入口</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="note-panel p-6">
+                                <span class="meta-label mb-3">使用建议</span>
+                                <p class="muted-copy text-sm mb-0">
+                                    如果你已经有 PDF 文件，优先在本页打开预览；如果只是临时查公式，直接看下方网页版速查会更快。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="note-shell lg:grid-cols-[0.32fr_0.68fr] lg:grid">
+                <aside class="grid gap-4 lg:sticky lg:top-28 self-start" data-reveal>
+                    <div class="note-sidebar-card">
+                        <span class="meta-label mb-3">快速导航</span>
+                        <nav aria-label="笔记内部导航" class="grid gap-2">
+                            <a class="note-nav-link" href="#overview" data-nav-link>页面概览</a>
+                            <a class="note-nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                            <a class="note-nav-link" href="#highlights" data-nav-link>核心知识点</a>
+                        </nav>
+                    </div>
+
+                    <div class="note-sidebar-card">
+                        <span class="meta-label mb-3">当前状态</span>
+                        <p class="muted-copy text-sm mb-3">项目目录里暂时还没有检测到 `circuit-notes.pdf`，所以预览区会先给出提示信息。</p>
+                        <p class="muted-copy text-sm mb-0">文件补齐后，无需改代码，点击按钮即可直接载入。</p>
+                    </div>
+                </aside>
+
+                <div class="grid gap-6">
+                    <section id="preview" data-reveal>
+                        <div class="surface-panel p-6 md:p-8">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                                <div>
+                                    <span class="section-kicker mb-3">
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                        Preview
+                                    </span>
+                                    <h2 class="section-title text-slate-900">PDF 原件预览</h2>
+                                </div>
+                                <div class="flex flex-wrap gap-3">
+                                    <button type="button" class="btn-primary" data-open-pdf data-pdf-url="circuit-notes.pdf">加载预览</button>
+                                    <a href="circuit-notes.pdf" class="btn-secondary" download data-download-pdf>下载原件</a>
+                                </div>
+                            </div>
+
+                            <div class="preview-shell">
+                                <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
+                                    <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
+                                    <p class="text-lg font-semibold text-slate-700 mb-0">点击按钮后在本页尝试加载 PDF</p>
+                                    <p class="muted-copy text-sm mb-0">如果目录中缺少 `circuit-notes.pdf`，页面会直接给出错误提示，而不是留下一块空白区域。</p>
+                                    <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
+                                </div>
+                                <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
+                            </div>
+
+                            <noscript>
+                                <p class="mt-4 px-4 py-3 rounded-2xl border border-amber-200 bg-amber-50 text-amber-700 text-sm">
+                                    当前浏览器禁用了 JavaScript，无法在页面内直接预览 PDF。你仍然可以使用下载按钮查看原件。
+                                </p>
+                            </noscript>
+                        </div>
+                    </section>
+
+                    <section id="highlights" data-reveal>
+                        <div class="surface-panel p-6 md:p-8 article-body math-content">
+                            <span class="section-kicker mb-4">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                Highlights
+                            </span>
+                            <h2 class="section-title text-slate-900 mb-6">网页版核心知识点速查</h2>
+
+                            <div class="grid gap-6">
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">1. 基尔霍夫定律（Kirchhoff's Laws）</h3>
+                                    <p class="mb-4">
+                                        基尔霍夫定律是电路分析的起点。复杂拓扑往往并不直接靠“看图得解”，
+                                        而是靠 KCL、KVL 把电流和电压关系系统地写成方程组。
+                                    </p>
+                                    <div class="formula-block rounded-2xl p-5 text-sm">
+                                        <p class="mb-3"><strong>KCL：</strong> 对任意节点，流入与流出电流的代数和为零。</p>
+                                        <p class="text-center text-lg my-4">$$ \sum_{k=1}^{n} I_k = 0 $$</p>
+                                        <p class="mb-3 mt-4"><strong>KVL：</strong> 沿任意闭合回路，所有电压升降的代数和为零。</p>
+                                        <p class="text-center text-lg my-4">$$ \sum_{k=1}^{m} U_k = 0 $$</p>
+                                    </div>
+                                </article>
+
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">2. 理想运算放大器（Op-Amp）</h3>
+                                    <p class="mb-4">
+                                        理想运放在分析里最常用的不是器件细节，而是两个近似条件：
+                                        电压上的“虚短”和电流上的“虚断”。很多经典放大电路都从这两条近似出发。
+                                    </p>
+                                    <ul class="list-disc list-inside grid gap-2 mb-0">
+                                        <li><strong>虚短（Virtual Short）：</strong> 反相端与同相端电压近似相等，\( V_+ \approx V_- \)</li>
+                                        <li><strong>虚断（Virtual Open）：</strong> 输入阻抗极高，可视为输入电流近似为零，\( I_+ = I_- = 0 \)</li>
+                                    </ul>
+                                </article>
+
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">3. 如何使用这页与 PDF 原件</h3>
+                                    <p class="mb-0">
+                                        这页适合查公式和快速回忆分析思路；如果你需要完整推导、题型拆解或原始排版，
+                                        还是应该回到 PDF 原件。两者的分工不同，不必强行用网页替代原笔记。
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

@@ -3,224 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页 | 欢迎来到我的世界</title>
-    <!-- 引入 Tailwind CSS 用于快速构建现代且美观的界面 -->
+    <title>Cryptic | 电子系学生主页</title>
+    <meta name="description" content="Cryptic 的个人主页，展示项目经历、课程笔记、阅读记录与当前关注方向。">
+    <meta name="theme-color" content="#f4efe7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 FontAwesome 用于社交媒体等图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* 开启平滑滚动，让页面导航更丝滑 */
-        html { scroll-behavior: smooth; }
-        /* 简单的渐变文字效果 */
-        .text-gradient {
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script defer src="assets/js/site.js"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased font-sans">
+<body class="site-shell">
+    <a class="skip-link" href="#main">跳到正文</a>
 
-    <!-- 顶部导航栏 -->
-    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 font-bold text-xl tracking-wider">
-                    MyPortfolio <span class="text-blue-600">.</span>
+    <header class="site-header" data-site-header>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between gap-4">
+                <a href="#home" class="inline-flex items-center gap-3 no-underline">
+                    <span class="brand-mark" aria-hidden="true">C</span>
+                    <span>
+                        <span class="brand-name block text-lg font-bold tracking-tight">Cryptic</span>
+                        <span class="block text-sm text-slate-500">EE Student · Builder · Notes Lover</span>
+                    </span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-2" aria-label="主导航">
+                    <a class="nav-link" href="#home" data-nav-link>首页</a>
+                    <a class="nav-link" href="#about" data-nav-link>关于我</a>
+                    <a class="nav-link" href="#projects" data-nav-link>项目</a>
+                    <a class="nav-link" href="#notes" data-nav-link>笔记</a>
+                    <a class="nav-link" href="#reading" data-nav-link>阅读</a>
+                    <a class="nav-link" href="#contact" data-nav-link>联系</a>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                    <a href="notes-circuit.html" class="hidden sm:inline-flex btn-secondary">最近更新</a>
+                    <button type="button" class="icon-button md:hidden" aria-label="展开导航菜单" aria-expanded="false" data-menu-toggle>
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">首页</a>
-                        <a href="#about" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">关于我</a>
-                        <a href="#projects" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">项目经历</a>
-                        <a href="#notes" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">课程笔记</a>
-                        <a href="#reading" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">阅读分享</a>
-                        <a href="#contact" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">联系方式</a>
+            </div>
+
+            <nav class="mobile-nav-panel md:hidden" aria-label="移动端导航" data-menu-panel hidden>
+                <a class="mobile-nav-link" href="#home" data-nav-link>首页</a>
+                <a class="mobile-nav-link" href="#about" data-nav-link>关于我</a>
+                <a class="mobile-nav-link" href="#projects" data-nav-link>项目</a>
+                <a class="mobile-nav-link" href="#notes" data-nav-link>笔记</a>
+                <a class="mobile-nav-link" href="#reading" data-nav-link>阅读</a>
+                <a class="mobile-nav-link" href="#contact" data-nav-link>联系</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page-shell">
+        <section id="home" class="section-shell pt-10 md:pt-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-start">
+                    <div class="hero-panel p-8 md:p-12" data-reveal>
+                        <span class="section-kicker mb-5">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                            Digital Garden in Progress
+                        </span>
+                        <h1 class="hero-title text-slate-900 mb-6">
+                            你好，我是 <span class="hero-highlight">Cryptic</span><br>
+                            把课程、代码和思考整理成可复用的知识系统。
+                        </h1>
+                        <p class="hero-copy text-lg md:text-xl max-w-3xl mb-8">
+                            目前在上海交通大学电子系就读，主要关注嵌入式系统、数据处理脚本和技术写作。
+                            这个小站既是作品集，也是我把学习过程公开化的一块实验田。
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <a href="#projects" class="btn-primary">查看项目概览</a>
+                            <a href="notes-circuit.html?pdf=1" class="btn-secondary">直达 PDF 预览</a>
+                        </div>
+                        <div class="pill-row">
+                            <span class="pill"><i class="fa-solid fa-microchip"></i> 嵌入式 / 电路实验</span>
+                            <span class="pill"><i class="fa-solid fa-code"></i> Python · C++ · LaTeX</span>
+                            <span class="pill"><i class="fa-solid fa-book-open-reader"></i> 课程笔记持续整理中</span>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-4">
+                        <div class="surface-panel p-6" data-reveal>
+                            <span class="meta-label mb-3">当前状态</span>
+                            <h2 class="card-title mb-3">把零散内容收束成一个更稳定的个人站点</h2>
+                            <p class="muted-copy mb-5">
+                                这次版本重点做了结构抽离、移动端导航、统一视觉语言和内容跳转闭环，
+                                让主页和笔记页不再像两个孤立的静态页面。
+                            </p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <div class="metric-card">
+                                    <span class="metric-number">2</span>
+                                    <span class="muted-copy text-sm">现有公开页面</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-number">3</span>
+                                    <span class="muted-copy text-sm">公共资源文件</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-number">1</span>
+                                    <span class="muted-copy text-sm">已接通的课程笔记入口</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="surface-panel p-6" data-reveal>
+                            <span class="meta-label mb-3">最近更新</span>
+                            <div class="timeline-list">
+                                <div class="timeline-item">
+                                    <strong>站点结构统一</strong>
+                                    <span class="muted-copy text-sm">样式与交互已拆到 `assets/`，后续加页面成本更低。</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <strong>课程笔记入口闭环</strong>
+                                    <span class="muted-copy text-sm">主页可以直接跳到笔记页，也能一键打开 PDF 预览。</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <strong>移动端体验补齐</strong>
+                                    <span class="muted-copy text-sm">增加折叠菜单、跳转高亮和更稳妥的状态展示。</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- 首页主视觉区域 (Hero Section) -->
-    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 flex items-center min-h-screen">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-                你好，我是 <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-gradient">Cryptic</span>
-            </h1>
-            <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto mb-10">
-                SJTU 电子系大二在读 | 热爱用代码探索世界，习惯用 Markdown 与 LaTeX 记录知识体系。
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition shadow-lg hover:shadow-xl">
-                    查看我的作品
-                </a>
-                <a href="#contact" class="bg-white text-gray-800 border border-gray-200 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition shadow-sm">
-                    联系我
-                </a>
-            </div>
-        </div>
-    </section>
+        <section id="about" class="section-shell">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
+                    <div class="surface-panel p-8 md:p-10" data-reveal>
+                        <span class="section-kicker mb-4">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                            About
+                        </span>
+                        <h2 class="section-title text-slate-900 mb-5">工程训练之外，我也在训练表达和组织能力。</h2>
+                        <p class="section-copy mb-5">
+                            我比较享受把一件事从“会做”推进到“能解释清楚”的过程。
+                            所以除了写代码、做实验，我也长期维护 Markdown、LaTeX 和零散的技术摘录，
+                            试着把知识变成以后还能继续调用的结构。
+                        </p>
+                        <div class="tag-row">
+                            <span class="stack-pill">Python 自动化</span>
+                            <span class="stack-pill">C++ 基础设施</span>
+                            <span class="stack-pill">电路与模电课程</span>
+                            <span class="stack-pill">LaTeX 排版</span>
+                            <span class="stack-pill">知识沉淀</span>
+                        </div>
+                    </div>
 
-    <!-- 关于我区域 -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">关于我</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- 头像/插图占位 -->
-                <div class="bg-blue-50 rounded-2xl p-8 flex justify-center items-center h-80">
-                    <!-- 你可以替换 src 为你自己的照片链接 -->
-                    <div class="w-48 h-48 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 shadow-inner">
-                        <i class="fa-solid fa-user-graduate text-6xl"></i>
+                    <div class="grid md:grid-cols-2 gap-4" data-reveal>
+                        <div class="feature-card">
+                            <span class="meta-label mb-2">学习方式</span>
+                            <h3 class="card-title mb-2">偏向“做中学”</h3>
+                            <p class="muted-copy text-sm">
+                                我更习惯通过小工具、实验报告和课程复习材料来把知识压实，而不是只停留在零散阅读。
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="meta-label mb-2">工具倾向</span>
+                            <h3 class="card-title mb-2">重视可复用性</h3>
+                            <p class="muted-copy text-sm">
+                                比起一次性脚本，我更关注模板、自动化和之后能继续扩展的组织方式。
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="meta-label mb-2">记录习惯</span>
+                            <h3 class="card-title mb-2">文档先行</h3>
+                            <p class="muted-copy text-sm">
+                                公式推导、阅读笔记和实验过程都会尽量保留可回溯版本，方便之后查漏补缺。
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="meta-label mb-2">当前关注</span>
+                            <h3 class="card-title mb-2">把站点继续实化</h3>
+                            <p class="muted-copy text-sm">
+                                下一步会逐步补齐真实项目链接、阅读文章页面和更多课程笔记，而不是只停留在占位描述。
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4">SJTUer / 终身学习者</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        你好！我是 Cryptic，目前在上海交通大学（SJTU）电子系就读大二。
-                        平时喜欢折腾各种技术，主要使用 Python 和 C++ 进行算法开发、小工具编写和底层探索。
-                        我是个“重度记录癖”，习惯用 LaTeX 排版精美的数理逻辑，用 Markdown 梳理系统性的知识网络。在这里，你会看到我的项目实践、专业课笔记以及平时阅读的感悟。
+            </div>
+        </section>
+
+        <section id="projects" class="section-shell">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                    <div data-reveal>
+                        <span class="section-kicker mb-4">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            Projects
+                        </span>
+                        <h2 class="section-title text-slate-900 mb-3">目前更像是项目线索集合，而不是完整案例库。</h2>
+                        <p class="section-copy max-w-3xl">
+                            这里先保留你真正做过的方向，并用更诚实的状态展示替代原来的 `#` 死链接。
+                            等后续有源码仓库或长文页面，再把每张卡片接成完整案例。
+                        </p>
+                    </div>
+                    <a href="#contact" class="btn-ghost self-start md:self-auto" data-reveal>联系我获取更多细节</a>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5">
+                    <article class="project-card" data-reveal>
+                        <div class="flex items-start justify-between gap-3 mb-4">
+                            <span class="card-icon"><i class="fa-solid fa-code"></i></span>
+                            <span class="status-chip draft">案例整理中</span>
+                        </div>
+                        <h3 class="card-title mb-3">C++ 面向对象实战</h3>
+                        <p class="muted-copy text-sm mb-4">
+                            以类设计、指针管理和对象协作作为重点，偏向把课堂上的 OOP 概念落实成能运行、能迭代的完整程序。
+                        </p>
+                        <div class="stack-row mb-4">
+                            <span class="stack-pill">C++</span>
+                            <span class="stack-pill">OOP</span>
+                            <span class="stack-pill">内存管理</span>
+                        </div>
+                        <p class="muted-copy text-sm">后续适合补：模块结构图、关键类关系和一次重构前后的差异。</p>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="flex items-start justify-between gap-3 mb-4">
+                            <span class="card-icon"><i class="fa-brands fa-python"></i></span>
+                            <span class="status-chip live">可继续扩展</span>
+                        </div>
+                        <h3 class="card-title mb-3">实验数据自动化脚本</h3>
+                        <p class="muted-copy text-sm mb-4">
+                            面向重复实验流程，把数据清洗、计算和出图串起来，减少手工整理时的重复劳动和易错点。
+                        </p>
+                        <div class="stack-row mb-4">
+                            <span class="stack-pill">Python</span>
+                            <span class="stack-pill">数据处理</span>
+                            <span class="stack-pill">图表生成</span>
+                        </div>
+                        <p class="muted-copy text-sm">后续适合补：输入输出样例、参数说明和运行截图。</p>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="flex items-start justify-between gap-3 mb-4">
+                            <span class="card-icon"><i class="fa-solid fa-microchip"></i></span>
+                            <span class="status-chip draft">实验记录为主</span>
+                        </div>
+                        <h3 class="card-title mb-3">单片机 / 嵌入式实验</h3>
+                        <p class="muted-copy text-sm mb-4">
+                            重点在于外设驱动、时序理解和软硬件联调。相比成品展示，更值得沉淀的是调试过程与踩坑记录。
+                        </p>
+                        <div class="stack-row mb-4">
+                            <span class="stack-pill">嵌入式</span>
+                            <span class="stack-pill">传感器</span>
+                            <span class="stack-pill">调试</span>
+                        </div>
+                        <p class="muted-copy text-sm">后续适合补：硬件连接图、调试日志和关键波形说明。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="notes" class="section-shell">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                    <div data-reveal>
+                        <span class="section-kicker mb-4">
+                            <i class="fa-solid fa-note-sticky"></i>
+                            Notes
+                        </span>
+                        <h2 class="section-title text-slate-900 mb-3">让课程笔记不只是“附件”，而是站点里的正式页面。</h2>
+                        <p class="section-copy max-w-3xl">
+                            现在主页上的课程笔记区已经接到真实页面，支持阅读网页版摘要、跳转到 PDF 预览，以及下载原文件。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+                    <article class="note-card" data-reveal>
+                        <div class="flex items-start justify-between gap-3 mb-4">
+                            <span class="card-icon"><i class="fa-solid fa-file-pdf"></i></span>
+                            <span class="status-chip live">已上线</span>
+                        </div>
+                        <h3 class="card-title mb-3">《电路理论 / 模电》复习笔记</h3>
+                        <p class="muted-copy text-sm mb-5">
+                            包含关键定律、公式和 PDF 原件入口。笔记页同时保留网页版速查内容，适合先快速浏览再回到原件细读。
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="notes-circuit.html" class="btn-primary">阅读笔记页</a>
+                            <a href="notes-circuit.html?pdf=1" class="btn-secondary">直接打开预览</a>
+                        </div>
+                    </article>
+
+                    <article class="note-card" data-reveal>
+                        <div class="flex items-start justify-between gap-3 mb-4">
+                            <span class="card-icon"><i class="fa-brands fa-markdown"></i></span>
+                            <span class="status-chip warn">待补内容</span>
+                        </div>
+                        <h3 class="card-title mb-3">C++ 进阶读书笔记</h3>
+                        <p class="muted-copy text-sm mb-5">
+                            这一栏暂时保留为规划位，避免继续用空链接占位。等内容整理成页后，再把入口接进站点导航。
+                        </p>
+                        <div class="note-action-card">
+                            <p class="muted-copy text-sm mb-0">建议后续补的最小版本：一页目录、一页 STL 摘要、一页智能指针误区整理。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="reading" class="section-shell">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8" data-reveal>
+                    <span class="section-kicker mb-4">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        Reading
+                    </span>
+                    <h2 class="section-title text-slate-900 mb-3">阅读区从“推荐语”改成更适合延伸成文章的结构。</h2>
+                    <p class="section-copy max-w-3xl">
+                        这里先强调每本书对你的具体作用，而不是泛泛推荐。后面如果要补书评，只需要把每张卡片接到真实文章即可。
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">Python</span>
-                        <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">C++</span>
-                        <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">LaTeX</span>
-                        <span class="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">Markdown</span>
-                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-5">
+                    <article class="reading-card" data-reveal>
+                        <span class="meta-label mb-3">Systems</span>
+                        <h3 class="card-title mb-3">《深入理解计算机系统》</h3>
+                        <p class="muted-copy text-sm mb-4">
+                            这本书更像一块底层视角的坐标系：内存、编译、链接、进程这些平时被拆散的话题，在这里能重新拼回一张图。
+                        </p>
+                        <div class="stack-row mb-4">
+                            <span class="stack-pill">系统观</span>
+                            <span class="stack-pill">C/C++ 底层</span>
+                            <span class="stack-pill">程序运行机制</span>
+                        </div>
+                        <p class="muted-copy text-sm">后续文章适合写：哪些章节真正改变了我看待代码执行过程的方式。</p>
+                    </article>
+
+                    <article class="reading-card" data-reveal>
+                        <span class="meta-label mb-3">Craft</span>
+                        <h3 class="card-title mb-3">《黑客与画家》</h3>
+                        <p class="muted-copy text-sm mb-4">
+                            它最有价值的地方不在于具体结论，而在于把“技术工作也是一种创造性劳动”这件事说得足够清楚。
+                        </p>
+                        <div class="stack-row mb-4">
+                            <span class="stack-pill">创造力</span>
+                            <span class="stack-pill">职业判断</span>
+                            <span class="stack-pill">技术表达</span>
+                        </div>
+                        <p class="muted-copy text-sm">后续文章适合写：哪些观点值得保留，哪些放到今天已经需要重新解释。</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 项目作品区域 -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">项目经历</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <!-- 项目卡片 1 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <i class="fa-solid fa-code text-4xl text-gray-400"></i>
+        <section id="contact" class="section-shell bg-slate-950 text-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="contact-panel" data-reveal>
+                    <span class="section-kicker mb-4">
+                        <i class="fa-regular fa-envelope"></i>
+                        Contact
+                    </span>
+                    <h2 class="section-title mb-4">如果你想聊项目、课程笔记或站点本身，可以直接发邮件。</h2>
+                    <p class="footnote mb-6">
+                        目前联系方式仍然是占位地址，部署前建议替换为真实邮箱与社交链接。
+                        我保留了结构，但去掉了原来那些没有目标地址的空跳转。
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <a href="mailto:your.email@sjtu.edu.cn?subject=来自主页的联系" class="btn-primary">your.email@sjtu.edu.cn</a>
+                        <a href="notes-circuit.html" class="btn-secondary">查看最近笔记</a>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">C++ 面向对象实战</h3>
-                        <p class="text-gray-600 text-sm mb-4">基于 C++ 开发的应用程序，深入运用了面向对象编程（OOP）思想、指针操作与底层内存管理机制。</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">查看源码 &rarr;</a>
+                    <div class="contact-line">
+                        <span class="social-chip"><i class="fa-brands fa-github"></i> GitHub 待补</span>
+                        <span class="social-chip"><i class="fa-brands fa-linkedin"></i> LinkedIn 待补</span>
+                        <span class="social-chip"><i class="fa-brands fa-x-twitter"></i> X / Twitter 待补</span>
                     </div>
                 </div>
 
-                <!-- 项目卡片 2 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <i class="fa-brands fa-python text-4xl text-gray-400"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">实验数据自动化脚本</h3>
-                        <p class="text-gray-600 text-sm mb-4">使用 Python 编写的实用工具，用于高效处理复杂的电路/物理实验数据，并一键生成美观的可视化图表。</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">了解更多 &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- 项目卡片 3 -->
-                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border border-gray-100">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <i class="fa-solid fa-microchip text-4xl text-gray-400"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">单片机/嵌入式实验</h3>
-                        <p class="text-gray-600 text-sm mb-4">结合底层硬件的编程尝试，控制各类传感器与外设，体会软硬件底层交互与协同的乐趣。</p>
-                        <a href="#" class="text-blue-600 font-medium hover:underline text-sm">了解更多 &rarr;</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 课程笔记区域 -->
-    <section id="notes" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">课程笔记</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- 笔记 1 -->
-                <div class="flex items-start gap-4 p-6 border border-gray-100 rounded-xl hover:shadow-md transition bg-gray-50">
-                    <div class="bg-blue-100 text-blue-600 p-3 rounded-lg"><i class="fa-solid fa-file-pdf"></i></div>
-                    <div>
-                        <h3 class="text-lg font-bold mb-1">《电路理论/模电》复习笔记</h3>
-                        <p class="text-gray-500 text-sm mb-3">使用 LaTeX 精美排版的期末复习重点，包含公式推导、定理证明和典型例题解析。</p>
-                        <!-- 更新了这里的 href 和 target -->
-                        <a href="notes-circuit.html" target="_blank" class="text-blue-600 text-sm font-medium hover:underline">阅读 PDF</a>
-                    </div>
-                </div>
-                <!-- 笔记 2 -->
-                <div class="flex items-start gap-4 p-6 border border-gray-100 rounded-xl hover:shadow-md transition bg-gray-50">
-                    <div class="bg-green-100 text-green-600 p-3 rounded-lg"><i class="fa-brands fa-markdown"></i></div>
-                    <div>
-                        <h3 class="text-lg font-bold mb-1">C++ 进阶读书笔记</h3>
-                        <p class="text-gray-500 text-sm mb-3">使用 Markdown 记录的 C++ 核心知识点，涵盖 STL 容器、模板编程、智能指针等内容。</p>
-                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">查看文章</a>
-                    </div>
+                <div class="pt-10 text-sm text-slate-400">
+                    <p>&copy; <span data-year></span> Cryptic. Built as a lightweight personal site with static pages.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 阅读分享区域 -->
-    <section id="reading" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">阅读分享</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <!-- 书籍 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm flex flex-col sm:flex-row gap-6 items-center sm:items-start border border-gray-100">
-                    <div class="w-24 h-32 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center text-gray-400">
-                        <i class="fa-solid fa-book-open text-3xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">《深入理解计算机系统 (CSAPP)》</h3>
-                        <p class="text-gray-600 text-sm mb-4">CS 必读神书。从程序员的视角俯瞰计算机系统，对理解 C/C++ 底层内存和运行原理非常有帮助。强烈推荐给所有技术爱好者。</p>
-                        <a href="#" class="text-gray-500 hover:text-blue-600 text-sm transition"><i class="fa-solid fa-pen-nib mr-1"></i> 阅读我的书评</a>
-                    </div>
-                </div>
-                <!-- 书籍 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm flex flex-col sm:flex-row gap-6 items-center sm:items-start border border-gray-100">
-                    <div class="w-24 h-32 bg-gray-200 rounded flex-shrink-0 flex items-center justify-center text-gray-400">
-                        <i class="fa-solid fa-book-open text-3xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">《黑客与画家》</h3>
-                        <p class="text-gray-600 text-sm mb-4">保罗·格雷厄姆的文集。书里提到“黑客与画家有很多共同点，他们都是创造者”，极大地拓宽了我对编程、创造力甚至是以后职业规划的认知。</p>
-                        <a href="#" class="text-gray-500 hover:text-blue-600 text-sm transition"><i class="fa-solid fa-pen-nib mr-1"></i> 阅读我的摘录</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系方式 & 页脚 -->
-    <section id="contact" class="py-20 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">保持联系</h2>
-                <p class="text-gray-400 mb-8">目前我正在寻找新的实习或合作机会。如果你有合适的项目或者仅仅是想交流技术，欢迎通过邮件联系我！</p>
-                
-                <!-- 极简版：直接展示并链接到邮箱 -->
-                <a href="mailto:your.email@sjtu.edu.cn" class="inline-flex items-center justify-center gap-3 border-2 border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white transition px-8 py-3 rounded-full font-bold text-lg">
-                    <i class="fa-regular fa-envelope"></i> your.email@sjtu.edu.cn
-                </a>
-            </div>
-            
-            <div class="flex justify-center space-x-6 text-center">
-                <a href="#" class="text-gray-400 hover:text-white text-2xl transition"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white text-2xl transition"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white text-2xl transition"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-            
-            <div class="mt-12 pt-8 border-t border-gray-800 text-gray-500 text-sm text-center">
-                &copy; 2026 Cryptic. 保留所有权利. 构建于 GitHub Pages.
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
 </body>
 </html>
