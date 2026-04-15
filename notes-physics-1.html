@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大学物理（荣誉）（1） | Cryptic</title>
-    <meta name="description" content="大学物理（荣誉）（1）课程笔记。">
-    <meta name="theme-color" content="#f3f3f0">
+    <title>《大学物理（荣誉）（1）》笔记 | Cryptic</title>
+    <meta name="description" content="大学物理（荣誉）（1）课程笔记页，支持在线阅读、PDF 预览和下载。">
+    <meta name="theme-color" content="#f4efe7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -13,115 +13,187 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
     <script defer src="assets/js/site.js"></script>
-    <script defer src="assets/js/note-access.js"></script>
     <script defer src="assets/js/notes.js"></script>
 </head>
-<body class="site-shell" data-note-id="physics-1">
+<body class="site-shell">
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header" data-site-header>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex items-center justify-between gap-4">
-                <a href="index.html" class="inline-flex items-center gap-3 no-underline">
+                <a href="notes.html" class="inline-flex items-center gap-3 no-underline">
                     <span class="brand-mark" aria-hidden="true">C</span>
-                    <span class="brand-name text-base">Cryptic</span>
+                    <span>
+                        <span class="brand-name block text-lg font-bold tracking-tight">Cryptic Notes</span>
+                        <span class="block text-sm text-slate-500">University Physics Honors I</span>
+                    </span>
                 </a>
 
-                <nav class="hidden md:flex items-center gap-1" aria-label="主导航">
-                    <a class="nav-link" href="index.html" data-nav-link>Home</a>
-                    <a class="nav-link" href="projects.html" data-nav-link>Projects</a>
-                    <a class="nav-link" href="notes.html" data-nav-link>Notes</a>
-                    <a class="nav-link" href="reading.html" data-nav-link>Reading</a>
+                <nav class="hidden md:flex items-center gap-2" aria-label="页面导航">
+                    <a class="nav-link" href="#overview" data-nav-link>概览</a>
+                    <a class="nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                    <a class="nav-link" href="#highlights" data-nav-link>阅读页说明</a>
                 </nav>
 
-                <button type="button" class="icon-button md:hidden" aria-label="展开导航菜单" aria-expanded="false" data-menu-toggle>
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+                <div class="flex items-center gap-3">
+                    <a href="notes.html" class="btn-secondary hidden sm:inline-flex">返回总览</a>
+                    <button type="button" class="icon-button md:hidden" aria-label="展开页面导航" aria-expanded="false" data-menu-toggle>
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
 
-            <nav class="mobile-nav-panel md:hidden" aria-label="移动端导航" data-menu-panel hidden>
-                <a class="mobile-nav-link" href="index.html" data-nav-link>Home</a>
-                <a class="mobile-nav-link" href="projects.html" data-nav-link>Projects</a>
-                <a class="mobile-nav-link" href="notes.html" data-nav-link>Notes</a>
-                <a class="mobile-nav-link" href="reading.html" data-nav-link>Reading</a>
+            <nav class="mobile-nav-panel md:hidden" aria-label="移动端页面导航" data-menu-panel hidden>
+                <a class="mobile-nav-link" href="#overview" data-nav-link>概览</a>
+                <a class="mobile-nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                <a class="mobile-nav-link" href="#highlights" data-nav-link>阅读页说明</a>
+                <a class="mobile-nav-link" href="notes.html">返回总览</a>
             </nav>
         </div>
     </header>
 
-    <main id="main" class="section-shell page-shell">
-        <div class="note-article-page px-4 sm:px-6 lg:px-8">
-            <nav class="note-breadcrumb" aria-label="面包屑" data-reveal>
-                <a href="index.html">Home</a> ·
-                <a href="notes.html">Class Notes</a> ·
-                <span>大学物理（荣誉）（1）</span>
-            </nav>
+    <main id="main" class="section-shell pt-10 md:pt-14">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section id="overview" class="mb-8">
+                <div class="hero-panel p-8 md:p-10" data-reveal>
+                    <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
+                        <div>
+                            <span class="section-kicker mb-4">
+                                <i class="fa-solid fa-book"></i>
+                                Course Notes
+                            </span>
+                            <h1 class="note-title hero-title text-slate-900 mb-5">《大学物理（荣誉）（1）》</h1>
+                            <p class="hero-copy text-lg mb-6">
+                                这页先作为课程笔记入口：优先保留能直接在线阅读的摘要，再把 PDF 原件接进同一页里，
+                                后续补内容时不需要再重搭结构。
+                            </p>
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <button type="button" class="btn-primary" data-open-pdf data-pdf-url="university-physics-honors-1.pdf">在本页预览 PDF</button>
+                                <a href="university-physics-honors-1.pdf" class="btn-secondary" download data-download-pdf>下载 PDF</a>
+                                <a href="notes.html" class="btn-ghost">返回总览</a>
+                            </div>
+                            <div class="pill-row">
+                                <span class="pill"><i class="fa-solid fa-calendar-days"></i> 最后更新：2026 年 4 月 15 日</span>
+                                <span class="pill"><i class="fa-regular fa-clock"></i> 页面阅读：约 3 分钟</span>
+                                <span class="pill"><i class="fa-solid fa-file-pdf"></i> PDF 文件名：`university-physics-honors-1.pdf`</span>
+                            </div>
+                        </div>
 
-            <article class="note-article" data-reveal>
-                <header>
-                    <h1 class="note-article-title">大学物理（荣誉）（1）</h1>
-                    <p class="note-meta-line">April 15, 2026 · Cryptic · Course Notes</p>
+                        <div class="grid gap-4">
+                            <div class="note-panel p-6">
+                                <span class="meta-label mb-3">页面定位</span>
+                                <div class="grid sm:grid-cols-2 gap-3">
+                                    <div class="metric-card">
+                                        <span class="metric-number">Read</span>
+                                        <span class="muted-copy text-sm">优先保证可以直接在线查看</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">PDF</span>
+                                        <span class="muted-copy text-sm">完整原件作为补充入口</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">Edit</span>
+                                        <span class="muted-copy text-sm">后续可以继续往里补章节摘要</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">Keep</span>
+                                        <span class="muted-copy text-sm">先稳住结构，再慢慢加内容</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="note-toolbar">
-                        <button type="button" class="btn-secondary" data-open-pdf data-pdf-url="university-physics-honors-1.pdf">
-                            在线预览 PDF
-                        </button>
-                        <a href="university-physics-honors-1.pdf" class="btn-secondary" download data-download-pdf data-download-action>
-                            下载 PDF
-                        </a>
+                            <div class="note-panel p-6">
+                                <span class="meta-label mb-3">当前状态</span>
+                                <p class="muted-copy text-sm mb-0">
+                                    这一页现在更偏“课程入口页”，适合先放目录、重点、题型和考试前速查内容。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="note-shell lg:grid-cols-[0.32fr_0.68fr] lg:grid">
+                <aside class="grid gap-4 lg:sticky lg:top-28 self-start" data-reveal>
+                    <div class="note-sidebar-card">
+                        <span class="meta-label mb-3">快速导航</span>
+                        <nav aria-label="笔记内部导航" class="grid gap-2">
+                            <a class="note-nav-link" href="#overview" data-nav-link>页面概览</a>
+                            <a class="note-nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                            <a class="note-nav-link" href="#highlights" data-nav-link>阅读页说明</a>
+                        </nav>
                     </div>
 
-                    <p class="note-access-note" data-download-note></p>
+                    <div class="note-sidebar-card">
+                        <span class="meta-label mb-3">建议补法</span>
+                        <p class="muted-copy text-sm mb-3">先把这门课最常回看的内容放进网页版，例如章节索引、重点公式和典型题型。</p>
+                        <p class="muted-copy text-sm mb-0">完整课堂讲义或手写整理则继续保留在 PDF 原件里。</p>
+                    </div>
+                </aside>
 
-                    <details class="toc-panel">
-                        <summary>Table of Contents</summary>
-                        <ul>
-                            <li><a href="#overview">课程说明</a></li>
-                            <li><a href="#content-plan">当前内容</a></li>
-                            <li><a href="#pdf-preview">PDF 预览</a></li>
-                        </ul>
-                    </details>
-                </header>
-
-                <div class="note-article-content article-body">
-                    <section id="overview">
-                        <h2>课程说明</h2>
-                        <p>
-                            这页现在先作为《大学物理（荣誉）（1）》的课程笔记入口。整体结构会优先服务于直接阅读，
-                            所以后续适合把章节摘要、公式关系、题型索引和考试前高频回看内容放在这里。
-                        </p>
-                        <p>
-                            如果你已经有完整的 PDF 讲义或手写整理，这一页不需要替代它，而是负责把最常回看的部分压缩成更容易快速访问的文章页。
-                        </p>
-                    </section>
-
-                    <section id="content-plan">
-                        <h2>当前内容</h2>
-                        <p>这一页现在先保留一个最简结构，方便你先看整体效果。后续可以优先补这几类内容：</p>
-                        <ul>
-                            <li>章节目录和复习顺序</li>
-                            <li>高频公式与物理量关系</li>
-                            <li>典型题型和常见误区</li>
-                            <li>和 PDF 原件的分工说明</li>
-                        </ul>
-                    </section>
-
-                    <section id="pdf-preview">
-                        <h2>PDF 预览</h2>
-                        <p class="muted-copy mb-4">
-                            这一块负责在线预览 PDF。是否允许下载由后台配置控制；即使关闭下载，这里也仍然可以保留在线预览。
-                        </p>
-                        <div class="preview-shell">
-                            <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
-                                <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
-                                <p class="text-lg font-semibold text-slate-700 mb-0">点击上方按钮后在本页尝试加载 PDF</p>
-                                <p class="muted-copy text-sm mb-0">如果目录里没有对应文件，页面会在这里直接给出提示。</p>
-                                <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
+                <div class="grid gap-6">
+                    <section id="preview" data-reveal>
+                        <div class="surface-panel p-6 md:p-8">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                                <div>
+                                    <span class="section-kicker mb-3">
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                        Preview
+                                    </span>
+                                    <h2 class="section-title text-slate-900">PDF 原件预览</h2>
+                                </div>
+                                <div class="flex flex-wrap gap-3">
+                                    <button type="button" class="btn-primary" data-open-pdf data-pdf-url="university-physics-honors-1.pdf">加载预览</button>
+                                    <a href="university-physics-honors-1.pdf" class="btn-secondary" download data-download-pdf>下载原件</a>
+                                </div>
                             </div>
-                            <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
+
+                            <div class="preview-shell">
+                                <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
+                                    <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
+                                    <p class="text-lg font-semibold text-slate-700 mb-0">点击按钮后在本页尝试加载 PDF</p>
+                                    <p class="muted-copy text-sm mb-0">如果还没放入对应文件，状态区域会给出提示。</p>
+                                    <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
+                                </div>
+                                <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="highlights" data-reveal>
+                        <div class="surface-panel p-6 md:p-8 article-body">
+                            <span class="section-kicker mb-4">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                Highlights
+                            </span>
+                            <h2 class="section-title text-slate-900 mb-6">这一页适合先放什么</h2>
+
+                            <div class="grid gap-6">
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">1. 课程概览与章节入口</h3>
+                                    <p class="mb-0">
+                                        网页版最适合先承担目录页角色，把章节、知识块和复习顺序理清。这样之后回看时，不需要先翻 PDF 才知道内容放在哪。
+                                    </p>
+                                </article>
+
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">2. 高频回看内容</h3>
+                                    <p class="mb-0">
+                                        比起一开始就追求“把整本笔记搬上网”，更值得优先放的是考试前最常翻的内容，比如定义、关系式、常见题型和易错点。
+                                    </p>
+                                </article>
+
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">3. PDF 仍然保留完整性</h3>
+                                    <p class="mb-0">
+                                        如果你已经有完整讲义、课堂笔记或手写推导，继续保留在 PDF 就够了；网页负责高频访问部分，两者分工会更清楚。
+                                    </p>
+                                </article>
+                            </div>
                         </div>
                     </section>
                 </div>
-            </article>
+            </div>
         </div>
     </main>
 </body>

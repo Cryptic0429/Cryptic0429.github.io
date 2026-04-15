@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数学分析（荣誉）（2） | Cryptic</title>
-    <meta name="description" content="数学分析（荣誉）（2）课程笔记。">
-    <meta name="theme-color" content="#f3f3f0">
+    <title>《数学分析（荣誉）（2）》笔记 | Cryptic</title>
+    <meta name="description" content="数学分析（荣誉）（2）课程笔记页，支持在线阅读、PDF 预览和下载。">
+    <meta name="theme-color" content="#f4efe7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -13,114 +13,187 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
     <script defer src="assets/js/site.js"></script>
-    <script defer src="assets/js/note-access.js"></script>
     <script defer src="assets/js/notes.js"></script>
 </head>
-<body class="site-shell" data-note-id="analysis-2">
+<body class="site-shell">
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header" data-site-header>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex items-center justify-between gap-4">
-                <a href="index.html" class="inline-flex items-center gap-3 no-underline">
+                <a href="notes.html" class="inline-flex items-center gap-3 no-underline">
                     <span class="brand-mark" aria-hidden="true">C</span>
-                    <span class="brand-name text-base">Cryptic</span>
+                    <span>
+                        <span class="brand-name block text-lg font-bold tracking-tight">Cryptic Notes</span>
+                        <span class="block text-sm text-slate-500">Mathematical Analysis Honors II</span>
+                    </span>
                 </a>
 
-                <nav class="hidden md:flex items-center gap-1" aria-label="主导航">
-                    <a class="nav-link" href="index.html" data-nav-link>Home</a>
-                    <a class="nav-link" href="projects.html" data-nav-link>Projects</a>
-                    <a class="nav-link" href="notes.html" data-nav-link>Notes</a>
-                    <a class="nav-link" href="reading.html" data-nav-link>Reading</a>
+                <nav class="hidden md:flex items-center gap-2" aria-label="页面导航">
+                    <a class="nav-link" href="#overview" data-nav-link>概览</a>
+                    <a class="nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                    <a class="nav-link" href="#highlights" data-nav-link>阅读页说明</a>
                 </nav>
 
-                <button type="button" class="icon-button md:hidden" aria-label="展开导航菜单" aria-expanded="false" data-menu-toggle>
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+                <div class="flex items-center gap-3">
+                    <a href="notes.html" class="btn-secondary hidden sm:inline-flex">返回总览</a>
+                    <button type="button" class="icon-button md:hidden" aria-label="展开页面导航" aria-expanded="false" data-menu-toggle>
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
 
-            <nav class="mobile-nav-panel md:hidden" aria-label="移动端导航" data-menu-panel hidden>
-                <a class="mobile-nav-link" href="index.html" data-nav-link>Home</a>
-                <a class="mobile-nav-link" href="projects.html" data-nav-link>Projects</a>
-                <a class="mobile-nav-link" href="notes.html" data-nav-link>Notes</a>
-                <a class="mobile-nav-link" href="reading.html" data-nav-link>Reading</a>
+            <nav class="mobile-nav-panel md:hidden" aria-label="移动端页面导航" data-menu-panel hidden>
+                <a class="mobile-nav-link" href="#overview" data-nav-link>概览</a>
+                <a class="mobile-nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                <a class="mobile-nav-link" href="#highlights" data-nav-link>阅读页说明</a>
+                <a class="mobile-nav-link" href="notes.html">返回总览</a>
             </nav>
         </div>
     </header>
 
-    <main id="main" class="section-shell page-shell">
-        <div class="note-article-page px-4 sm:px-6 lg:px-8">
-            <nav class="note-breadcrumb" aria-label="面包屑" data-reveal>
-                <a href="index.html">Home</a> ·
-                <a href="notes.html">Class Notes</a> ·
-                <span>数学分析（荣誉）（2）</span>
-            </nav>
+    <main id="main" class="section-shell pt-10 md:pt-14">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section id="overview" class="mb-8">
+                <div class="hero-panel p-8 md:p-10" data-reveal>
+                    <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
+                        <div>
+                            <span class="section-kicker mb-4">
+                                <i class="fa-solid fa-square-root-variable"></i>
+                                Course Notes
+                            </span>
+                            <h1 class="note-title hero-title text-slate-900 mb-5">《数学分析（荣誉）（2）》</h1>
+                            <p class="hero-copy text-lg mb-6">
+                                这页同样先以“能直接读”为目标：网页版负责放复习时最常回看的结构和重点，
+                                PDF 继续保留完整推导、证明和原始整理。
+                            </p>
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <button type="button" class="btn-primary" data-open-pdf data-pdf-url="mathematical-analysis-honors-2.pdf">在本页预览 PDF</button>
+                                <a href="mathematical-analysis-honors-2.pdf" class="btn-secondary" download data-download-pdf>下载 PDF</a>
+                                <a href="notes.html" class="btn-ghost">返回总览</a>
+                            </div>
+                            <div class="pill-row">
+                                <span class="pill"><i class="fa-solid fa-calendar-days"></i> 最后更新：2026 年 4 月 15 日</span>
+                                <span class="pill"><i class="fa-regular fa-clock"></i> 页面阅读：约 3 分钟</span>
+                                <span class="pill"><i class="fa-solid fa-file-pdf"></i> PDF 文件名：`mathematical-analysis-honors-2.pdf`</span>
+                            </div>
+                        </div>
 
-            <article class="note-article" data-reveal>
-                <header>
-                    <h1 class="note-article-title">数学分析（荣誉）（2）</h1>
-                    <p class="note-meta-line">April 15, 2026 · Cryptic · Course Notes</p>
+                        <div class="grid gap-4">
+                            <div class="note-panel p-6">
+                                <span class="meta-label mb-3">页面定位</span>
+                                <div class="grid sm:grid-cols-2 gap-3">
+                                    <div class="metric-card">
+                                        <span class="metric-number">Defs</span>
+                                        <span class="muted-copy text-sm">定义和结论可做速查</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">Proof</span>
+                                        <span class="muted-copy text-sm">完整证明保留在 PDF</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">Map</span>
+                                        <span class="muted-copy text-sm">先把知识结构搭出来</span>
+                                    </div>
+                                    <div class="metric-card">
+                                        <span class="metric-number">Revise</span>
+                                        <span class="muted-copy text-sm">考前回看会更快</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="note-toolbar">
-                        <button type="button" class="btn-secondary" data-open-pdf data-pdf-url="mathematical-analysis-honors-2.pdf">
-                            在线预览 PDF
-                        </button>
-                        <a href="mathematical-analysis-honors-2.pdf" class="btn-secondary" download data-download-pdf data-download-action>
-                            下载 PDF
-                        </a>
+                            <div class="note-panel p-6">
+                                <span class="meta-label mb-3">当前状态</span>
+                                <p class="muted-copy text-sm mb-0">
+                                    这页适合先补定义、定理框架、常见思路和题型入口，尽量把高频回看内容从 PDF 里提出来。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="note-shell lg:grid-cols-[0.32fr_0.68fr] lg:grid">
+                <aside class="grid gap-4 lg:sticky lg:top-28 self-start" data-reveal>
+                    <div class="note-sidebar-card">
+                        <span class="meta-label mb-3">快速导航</span>
+                        <nav aria-label="笔记内部导航" class="grid gap-2">
+                            <a class="note-nav-link" href="#overview" data-nav-link>页面概览</a>
+                            <a class="note-nav-link" href="#preview" data-nav-link>PDF 预览</a>
+                            <a class="note-nav-link" href="#highlights" data-nav-link>阅读页说明</a>
+                        </nav>
                     </div>
 
-                    <p class="note-access-note" data-download-note></p>
+                    <div class="note-sidebar-card">
+                        <span class="meta-label mb-3">建议补法</span>
+                        <p class="muted-copy text-sm mb-3">这一类课程很适合把“定义 - 结论 - 典型思路”压缩成网页速查。</p>
+                        <p class="muted-copy text-sm mb-0">证明细节如果已经写在 PDF 里，可以先不急着全部迁移到网页。</p>
+                    </div>
+                </aside>
 
-                    <details class="toc-panel">
-                        <summary>Table of Contents</summary>
-                        <ul>
-                            <li><a href="#overview">课程说明</a></li>
-                            <li><a href="#plan">适合补充的内容</a></li>
-                            <li><a href="#pdf-preview">PDF 预览</a></li>
-                        </ul>
-                    </details>
-                </header>
-
-                <div class="note-article-content article-body">
-                    <section id="overview">
-                        <h2>课程说明</h2>
-                        <p>
-                            数学分析这类课程更适合用文章页去承载“定义、结论、证明骨架、题型入口”这些高频回看内容，
-                            因为它们比完整课堂笔记更适合被快速查阅。
-                        </p>
-                    </section>
-
-                    <section id="plan">
-                        <h2>适合补充的内容</h2>
-                        <ul>
-                            <li>重要定义和定理的简明表述</li>
-                            <li>证明的标准套路和切入点</li>
-                            <li>典型题型、变式和易错点</li>
-                            <li>和 PDF 原始笔记之间的分工</li>
-                        </ul>
-                        <p>
-                            这样做的好处是：网页承担“快速回看”，PDF 继续承担“完整记录”，两者职责清晰，也方便以后继续扩展。
-                        </p>
-                    </section>
-
-                    <section id="pdf-preview">
-                        <h2>PDF 预览</h2>
-                        <p class="muted-copy mb-4">
-                            这里保留 PDF 在线预览入口。是否允许下载由配置控制，所以可以针对不同课程单独决定。
-                        </p>
-                        <div class="preview-shell">
-                            <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
-                                <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
-                                <p class="text-lg font-semibold text-slate-700 mb-0">点击上方按钮后在本页尝试加载 PDF</p>
-                                <p class="muted-copy text-sm mb-0">如果目录里没有对应文件，页面会在这里直接给出提示。</p>
-                                <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
+                <div class="grid gap-6">
+                    <section id="preview" data-reveal>
+                        <div class="surface-panel p-6 md:p-8">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                                <div>
+                                    <span class="section-kicker mb-3">
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                        Preview
+                                    </span>
+                                    <h2 class="section-title text-slate-900">PDF 原件预览</h2>
+                                </div>
+                                <div class="flex flex-wrap gap-3">
+                                    <button type="button" class="btn-primary" data-open-pdf data-pdf-url="mathematical-analysis-honors-2.pdf">加载预览</button>
+                                    <a href="mathematical-analysis-honors-2.pdf" class="btn-secondary" download data-download-pdf>下载原件</a>
+                                </div>
                             </div>
-                            <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
+
+                            <div class="preview-shell">
+                                <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
+                                    <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
+                                    <p class="text-lg font-semibold text-slate-700 mb-0">点击按钮后在本页尝试加载 PDF</p>
+                                    <p class="muted-copy text-sm mb-0">如果还没放入对应文件，状态区域会给出提示。</p>
+                                    <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
+                                </div>
+                                <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="highlights" data-reveal>
+                        <div class="surface-panel p-6 md:p-8 article-body">
+                            <span class="section-kicker mb-4">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                Highlights
+                            </span>
+                            <h2 class="section-title text-slate-900 mb-6">这一页适合先放什么</h2>
+
+                            <div class="grid gap-6">
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">1. 定义和结论先上线</h3>
+                                    <p class="mb-0">
+                                        数分这类课程里，最适合先搬到网页上的通常是定义、定理表述、条件差异和易混点，因为这些内容最适合做快速回看。
+                                    </p>
+                                </article>
+
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">2. 证明思路写骨架就够</h3>
+                                    <p class="mb-0">
+                                        如果完整证明已经在原始笔记里存在，网页版先写关键思路、常见套路和切入点就足够，不需要一开始就全量迁移。
+                                    </p>
+                                </article>
+
+                                <article class="note-action-card">
+                                    <h3 class="card-title mb-3">3. 题型入口能显著提高复习效率</h3>
+                                    <p class="mb-0">
+                                        如果后续要继续补内容，建议把典型题型、常见变式和易错点单独列出来。对考前使用来说，这通常比纯文本长笔记更有价值。
+                                    </p>
+                                </article>
+                            </div>
                         </div>
                     </section>
                 </div>
-            </article>
+            </div>
         </div>
     </main>
 </body>
