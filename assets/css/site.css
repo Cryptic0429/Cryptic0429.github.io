@@ -850,6 +850,52 @@ img {
     margin: 0;
 }
 
+.homework-feed {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.homework-feed-item {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(73, 55, 39, 0.1);
+}
+
+.homework-feed-item:first-child {
+    border-top: 1px solid rgba(73, 55, 39, 0.1);
+}
+
+.homework-feed-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.homework-feed-link:hover .homework-feed-title {
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+}
+
+.homework-feed-title {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.homework-feed-meta {
+    margin-top: 0.45rem;
+    color: rgba(103, 83, 67, 0.9);
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.homework-feed-summary {
+    margin-top: 0.35rem;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
 .note-sidebar-card {
     padding: 1.4rem;
     border: 1px solid var(--line);
