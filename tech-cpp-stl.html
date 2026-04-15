@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大学物理（荣誉）（1） | Cryptic</title>
-    <meta name="description" content="大学物理（荣誉）（1）课程笔记。">
+    <title>C++ / STL | Cryptic</title>
+    <meta name="description" content="C++ / STL 技术笔记。">
     <meta name="theme-color" content="#f3f3f0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,66 +50,49 @@
         <div class="note-article-page px-4 sm:px-6 lg:px-8">
             <nav class="note-breadcrumb" aria-label="面包屑" data-reveal>
                 <a href="index.html">Home</a> ·
-                <a href="notes.html">Class Notes</a> ·
-                <span>大学物理（荣誉）（1）</span>
+                <a href="notes.html">Technical Notes</a> ·
+                <span>C++ / STL</span>
             </nav>
 
             <article class="note-article" data-reveal>
                 <header>
-                    <h1 class="note-article-title">大学物理（荣誉）（1）</h1>
-                    <p class="note-meta-line">April 15, 2026 · Cryptic · Course Notes</p>
+                    <h1 class="note-article-title">C++ / STL</h1>
+                    <p class="note-meta-line">April 15, 2026 · Cryptic · Technical Notes</p>
 
                     <details class="toc-panel">
                         <summary>目录</summary>
                         <ul>
-                            <li><a href="#overview">课程说明</a></li>
-                            <li><a href="#assignments">作业整理</a></li>
-                            <li><a href="#review-notes">复习笔记</a></li>
-                            <li><a href="#exam-focus">考前重点</a></li>
+                            <li><a href="#containers">容器视角</a></li>
+                            <li><a href="#algorithms">算法与迭代器</a></li>
+                            <li><a href="#pitfalls">常见坑点</a></li>
                         </ul>
                     </details>
                 </header>
 
                 <div class="note-article-content article-body">
-                    <section id="overview">
-                        <h2>课程说明</h2>
+                    <section id="containers">
+                        <h2>容器视角</h2>
                         <p>
-                            这一页不再放 PDF 预览，而是直接承担课程笔记本身。内容按照“作业回看”和“复习回看”
-                            两种场景拆开，这样平时做题和考前整理都能更快找到对应位置。
-                        </p>
-                        <p>
-                            对这门课来说，网页更适合放框架、公式关系、典型误区和题型入口，而不是完整逐字记录。
+                            复习 STL 时不要先背接口，先判断数据结构的代价模型。`vector` 适合连续存储和随机访问，
+                            `list` 适合频繁拼接，`unordered_map` 适合均摊查找，但对哈希质量和常数更敏感。
                         </p>
                     </section>
 
-                    <section id="assignments">
-                        <h2>作业整理</h2>
-                        <p>每次作业建议固定记录四件事，避免只留下答案：</p>
+                    <section id="algorithms">
+                        <h2>算法与迭代器</h2>
+                        <p>
+                            大部分算法都建立在迭代器能力之上。看到一个算法时，先问自己它要求的是输入迭代器、
+                            双向迭代器还是随机访问迭代器，这比死记函数签名更有用。
+                        </p>
+                    </section>
+
+                    <section id="pitfalls">
+                        <h2>常见坑点</h2>
                         <ul>
-                            <li>题目属于哪一类模型，例如质点运动、动量守恒或刚体转动。</li>
-                            <li>核心方程从哪条定律出发，而不是只记最终代数形式。</li>
-                            <li>推导时卡住的位置，是建系、受力、守恒条件还是边界理解。</li>
-                            <li>错因是物理图景没想清楚，还是计算层面的代换失误。</li>
+                            <li>插入或删除后，哪些迭代器会失效。</li>
+                            <li>值传递和引用传递在算法调用中的额外拷贝。</li>
+                            <li>自定义比较器是否满足严格弱序，否则排序和集合行为会不稳定。</li>
                         </ul>
-                        <p>这样后面回看作业时，可以直接按“模型”和“错因”复盘，而不是重新做完整套题。</p>
-                    </section>
-
-                    <section id="review-notes">
-                        <h2>复习笔记</h2>
-                        <p>复习阶段更适合按“概念关系”而不是按课次整理，当前优先保留这些回看入口：</p>
-                        <ul>
-                            <li>运动学、动力学、能量方法三种视角分别解决什么问题。</li>
-                            <li>常见守恒量成立的前提，尤其是系统边界和外力条件。</li>
-                            <li>量纲、极限情况和方向判断，作为验算的第一层过滤。</li>
-                        </ul>
-                    </section>
-
-                    <section id="exam-focus">
-                        <h2>考前重点</h2>
-                        <p>
-                            考前最后一轮不要再追求全覆盖，优先回看高频公式、典型图景和最容易混淆的条件。
-                            如果后面继续补内容，这里适合做成一页短清单，控制在十分钟内能扫完。
-                        </p>
                     </section>
                 </div>
             </article>

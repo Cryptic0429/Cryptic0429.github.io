@@ -13,10 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
     <script defer src="assets/js/site.js"></script>
-    <script defer src="assets/js/note-access.js"></script>
-    <script defer src="assets/js/notes.js"></script>
 </head>
-<body class="site-shell" data-note-id="analysis-2">
+<body class="site-shell">
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header" data-site-header>
@@ -61,23 +59,13 @@
                     <h1 class="note-article-title">数学分析（荣誉）（2）</h1>
                     <p class="note-meta-line">April 15, 2026 · Cryptic · Course Notes</p>
 
-                    <div class="note-toolbar">
-                        <button type="button" class="btn-secondary" data-open-pdf data-pdf-url="mathematical-analysis-honors-2.pdf">
-                            在线预览 PDF
-                        </button>
-                        <a href="mathematical-analysis-honors-2.pdf" class="btn-secondary" download data-download-pdf data-download-action>
-                            下载 PDF
-                        </a>
-                    </div>
-
-                    <p class="note-access-note" data-download-note></p>
-
                     <details class="toc-panel">
-                        <summary>Table of Contents</summary>
+                        <summary>目录</summary>
                         <ul>
                             <li><a href="#overview">课程说明</a></li>
-                            <li><a href="#plan">适合补充的内容</a></li>
-                            <li><a href="#pdf-preview">PDF 预览</a></li>
+                            <li><a href="#assignments">作业整理</a></li>
+                            <li><a href="#review-notes">复习笔记</a></li>
+                            <li><a href="#proof-routine">证明套路</a></li>
                         </ul>
                     </details>
                 </header>
@@ -91,33 +79,34 @@
                         </p>
                     </section>
 
-                    <section id="plan">
-                        <h2>适合补充的内容</h2>
+                    <section id="assignments">
+                        <h2>作业整理</h2>
+                        <p>证明题或计算题做完之后，建议至少补这三层整理：</p>
                         <ul>
-                            <li>重要定义和定理的简明表述</li>
-                            <li>证明的标准套路和切入点</li>
-                            <li>典型题型、变式和易错点</li>
-                            <li>和 PDF 原始笔记之间的分工</li>
+                            <li>题目调用了哪个定义、定理或判别法。</li>
+                            <li>证明的第一步为什么这样切，而不是机械套模板。</li>
+                            <li>哪里最容易出错，是量词、条件遗漏还是估计方向反了。</li>
                         </ul>
                         <p>
-                            这样做的好处是：网页承担“快速回看”，PDF 继续承担“完整记录”，两者职责清晰，也方便以后继续扩展。
+                            数学分析的作业价值主要在于暴露“不会起手”的位置，所以记录起手思路比记录最后答案更关键。
                         </p>
                     </section>
 
-                    <section id="pdf-preview">
-                        <h2>PDF 预览</h2>
-                        <p class="muted-copy mb-4">
-                            这里保留 PDF 在线预览入口。是否允许下载由配置控制，所以可以针对不同课程单独决定。
+                    <section id="review-notes">
+                        <h2>复习笔记</h2>
+                        <ul>
+                            <li>把重要定义和定理压缩成一两句话的可回忆表述。</li>
+                            <li>对每个章节保留一个“标准证明骨架”，帮助快速起手。</li>
+                            <li>把典型题型和变式并排放，方便看出变化点在哪里。</li>
+                        </ul>
+                    </section>
+
+                    <section id="proof-routine">
+                        <h2>证明套路</h2>
+                        <p>
+                            这一页后面最值得继续补的是证明套路索引。例如“先构造、再估计、最后取极限”这种骨架，
+                            比零散地堆定理更适合考前快速回看。
                         </p>
-                        <div class="preview-shell">
-                            <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
-                                <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
-                                <p class="text-lg font-semibold text-slate-700 mb-0">点击上方按钮后在本页尝试加载 PDF</p>
-                                <p class="muted-copy text-sm mb-0">如果目录里没有对应文件，页面会在这里直接给出提示。</p>
-                                <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
-                            </div>
-                            <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
-                        </div>
                     </section>
                 </div>
             </article>

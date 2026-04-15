@@ -25,10 +25,8 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script defer src="assets/js/site.js"></script>
-    <script defer src="assets/js/note-access.js"></script>
-    <script defer src="assets/js/notes.js"></script>
 </head>
-<body class="site-shell" data-note-id="circuit-honors">
+<body class="site-shell">
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header" data-site-header>
@@ -73,28 +71,31 @@
                     <h1 class="note-article-title">电路理论（荣誉）</h1>
                     <p class="note-meta-line">April 15, 2026 · Cryptic · Course Notes</p>
 
-                    <div class="note-toolbar">
-                        <button type="button" class="btn-secondary" data-open-pdf data-pdf-url="circuit-theory-honors.pdf">
-                            在线预览 PDF
-                        </button>
-                        <a href="circuit-theory-honors.pdf" class="btn-secondary" download data-download-pdf data-download-action>
-                            下载 PDF
-                        </a>
-                    </div>
-
-                    <p class="note-access-note" data-download-note></p>
-
                     <details class="toc-panel">
-                        <summary>Table of Contents</summary>
+                        <summary>目录</summary>
                         <ul>
+                            <li><a href="#assignments">作业整理</a></li>
                             <li><a href="#exercise-1">基尔霍夫定律</a></li>
                             <li><a href="#exercise-2">理想运放</a></li>
-                            <li><a href="#pdf-preview">PDF 预览</a></li>
+                            <li><a href="#review-notes">复习笔记</a></li>
                         </ul>
                     </details>
                 </header>
 
                 <div class="note-article-content article-body math-content">
+                    <section id="assignments">
+                        <h2>作业整理</h2>
+                        <p>
+                            电路作业最容易出现的问题不是不会算，而是方程建立得太晚。做题记录建议固定保留：
+                            电路结构判断、未知量选择、列式依据以及最后验算的物理意义。
+                        </p>
+                        <ul>
+                            <li>先判断节点法、回路法还是等效变换更直接。</li>
+                            <li>标清参考方向，后面所有符号约定都跟着这个方向走。</li>
+                            <li>算完后回到功率、极性和数量级做一次检查。</li>
+                        </ul>
+                    </section>
+
                     <section id="exercise-1">
                         <h2>基尔霍夫定律</h2>
                         <p>
@@ -124,20 +125,14 @@
                         </p>
                     </section>
 
-                    <section id="pdf-preview">
-                        <h2>PDF 预览</h2>
-                        <p class="muted-copy mb-4">
-                            这部分保留 PDF 在线预览。下载是否开放由后台配置决定，所以你可以对不同笔记单独控制权限。
-                        </p>
-                        <div class="preview-shell">
-                            <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
-                                <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
-                                <p class="text-lg font-semibold text-slate-700 mb-0">点击上方按钮后在本页尝试加载 PDF</p>
-                                <p class="muted-copy text-sm mb-0">如果当前目录中还没有对应文件，页面会在这里提示。</p>
-                                <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
-                            </div>
-                            <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
-                        </div>
+                    <section id="review-notes">
+                        <h2>复习笔记</h2>
+                        <p>考前回看这门课时，优先把下面几组内容放在一起：</p>
+                        <ul>
+                            <li>列方程的顺序：选变量、定方向、写约束、再求解。</li>
+                            <li>理想元件结论的适用边界，例如理想运放和理想电源的近似前提。</li>
+                            <li>常见等效变换和节点电压法各自更适合什么题型。</li>
+                        </ul>
                     </section>
                 </div>
             </article>

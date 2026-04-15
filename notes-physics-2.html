@@ -13,10 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
     <script defer src="assets/js/site.js"></script>
-    <script defer src="assets/js/note-access.js"></script>
-    <script defer src="assets/js/notes.js"></script>
 </head>
-<body class="site-shell" data-note-id="physics-2">
+<body class="site-shell">
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header" data-site-header>
@@ -61,23 +59,13 @@
                     <h1 class="note-article-title">大学物理（荣誉）（2）</h1>
                     <p class="note-meta-line">April 15, 2026 · Cryptic · Course Notes</p>
 
-                    <div class="note-toolbar">
-                        <button type="button" class="btn-secondary" data-open-pdf data-pdf-url="university-physics-honors-2.pdf">
-                            在线预览 PDF
-                        </button>
-                        <a href="university-physics-honors-2.pdf" class="btn-secondary" download data-download-pdf data-download-action>
-                            下载 PDF
-                        </a>
-                    </div>
-
-                    <p class="note-access-note" data-download-note></p>
-
                     <details class="toc-panel">
-                        <summary>Table of Contents</summary>
+                        <summary>目录</summary>
                         <ul>
                             <li><a href="#overview">课程说明</a></li>
-                            <li><a href="#plan">整理方向</a></li>
-                            <li><a href="#pdf-preview">PDF 预览</a></li>
+                            <li><a href="#assignments">作业整理</a></li>
+                            <li><a href="#review-notes">复习笔记</a></li>
+                            <li><a href="#problem-links">题型联动</a></li>
                         </ul>
                     </details>
                 </header>
@@ -86,36 +74,37 @@
                     <section id="overview">
                         <h2>课程说明</h2>
                         <p>
-                            这页和《大学物理（荣誉）（1）》保持相同结构，目标是让课程笔记在阅读体验上统一起来。
-                            以后无论补章节摘要、公式整理还是题型索引，都不需要重新思考页面框架。
+                            这页和《大学物理（荣誉）（1）》保持同一套阅读逻辑，直接展示笔记内容，
+                            不再额外放 PDF 预览区域。结构上依然按作业和复习两个入口分开。
                         </p>
                     </section>
 
-                    <section id="plan">
-                        <h2>整理方向</h2>
-                        <p>如果后面继续补内容，这一页比较适合优先放：</p>
+                    <section id="assignments">
+                        <h2>作业整理</h2>
+                        <p>对这一部分课程，作业区建议优先写清楚下面三类信息：</p>
                         <ul>
-                            <li>章节框架和复习路径</li>
-                            <li>公式之间的关系和使用条件</li>
-                            <li>典型题型的判断方法</li>
-                            <li>容易混淆的概念和误区</li>
+                            <li>题目背后的物理对象和控制方程，不要只停留在公式替换。</li>
+                            <li>关键近似条件，例如小角度、理想模型或忽略高阶项的前提。</li>
+                            <li>做题路径是先建模再列式，还是先找守恒关系再回到未知量。</li>
                         </ul>
                     </section>
 
-                    <section id="pdf-preview">
-                        <h2>PDF 预览</h2>
-                        <p class="muted-copy mb-4">
-                            这一页默认仍然支持在线预览；下载权限可以单独控制，所以即使未来补上 PDF，也不一定必须开放下载。
+                    <section id="review-notes">
+                        <h2>复习笔记</h2>
+                        <p>复习区更适合压缩成“判断题型时先想什么”的短笔记：</p>
+                        <ul>
+                            <li>先判断量之间的耦合关系，再决定是否能分离变量或线性化。</li>
+                            <li>把高频结论写成“适用条件 + 结果形式”的配对卡片。</li>
+                            <li>遇到综合题时，先画结构图，避免在式子里迷路。</li>
+                        </ul>
+                    </section>
+
+                    <section id="problem-links">
+                        <h2>题型联动</h2>
+                        <p>
+                            这页后面可以继续补“一个知识点对应哪些常见问法”的索引。这样从错题回到知识点时，
+                            不需要重新翻整份笔记，直接从这里跳回复习重点即可。
                         </p>
-                        <div class="preview-shell">
-                            <div class="preview-placeholder flex flex-col items-center justify-center gap-3" data-pdf-placeholder>
-                                <i class="fa-regular fa-file-pdf text-6xl text-slate-400"></i>
-                                <p class="text-lg font-semibold text-slate-700 mb-0">点击上方按钮后在本页尝试加载 PDF</p>
-                                <p class="muted-copy text-sm mb-0">如果目录里没有对应文件，页面会在这里直接给出提示。</p>
-                                <p class="status-text neutral mb-0" data-pdf-status role="status" aria-live="polite">当前尚未加载 PDF 预览。</p>
-                            </div>
-                            <embed type="application/pdf" class="w-full h-[820px]" hidden data-pdf-embed>
-                        </div>
                     </section>
                 </div>
             </article>
